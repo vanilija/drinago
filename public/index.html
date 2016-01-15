@@ -1,0 +1,609 @@
+<!doctype html>
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<html lang="">
+
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300' rel='stylesheet' type='text/css'>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="Polymer Starter Kit" />
+  <title>Explore Drinago</title>
+  <!-- Place favicon.ico in the `app/` directory -->
+
+  <!-- Chrome for Android theme color -->
+  <meta name="theme-color" content="#2E3AA1">
+
+  <!-- Web Application Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Tile color for Win8 -->
+  <meta name="msapplication-TileColor" content="#3372DF">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="PSK">
+  <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Polymer Starter Kit">
+  <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
+
+  <!-- Tile icon for Win8 (144x144) -->
+  <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild-->
+
+  <!-- build:js bower_components/webcomponentsjs/webcomponents-lite.min.js -->
+  <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <!-- endbuild -->
+
+    <link rel="import" href="bower_components/paper-menu/paper-submenu.html">
+  <!-- will be replaced with elements/elements.vulcanized.html -->
+
+  <link rel="import" href="elements/elements.html">
+  <!-- endreplace-->
+  <!-- For shared styles, shared-styles.html import in elements.html -->
+  <style is="custom-style" include="shared-styles"></style>
+<link rel="import" href="bower_components/paper-card/paper-card.html">
+<link rel="import" href="bower_components/paper-button/paper-button.html">
+</head>
+
+<body unresolved class="fullbleed layout vertical">
+  <span id="browser-sync-binding"></span>
+  <template is="dom-bind" id="app">
+
+    <paper-drawer-panel id="paperDrawerPanel" responsive-width="900px">
+      <!-- Drawer Scroll Header Panel -->
+      <paper-scroll-header-panel drawer fixed>
+
+        <!-- Drawer Toolbar -->
+        <paper-toolbar id="drawerToolbar">
+          <span class="paper-font-title">Home</span>
+        </paper-toolbar>
+
+        <!-- Drawer Content -->
+       
+          <!-- Paper Menu & submenu -->
+          
+          
+          <paper-menu class="list" attr-for-selected="data-route" selected="[[route]]">
+<a data-route="home" href="{{baseUrl}}">
+            <iron-icon icon="bookmark"></iron-icon>
+            <span>Welcome</span>
+</a>
+            <paper-menu>
+                
+
+<!-- General Info -->
+                
+<paper-submenu>
+    <paper-item class="menu-trigger"><iron-icon icon="explore"></iron-icon>General Info</paper-item>
+    <paper-menu class="menu-content">
+        
+    <!--<a data-route="car" href="{{baseUrl}}car"><paper-item>Archaeology</paper-item>-->
+        
+<paper-item>Geology</paper-item>
+<a data-route="ar" href="{{baseUrl}}ar"><paper-item>Archelogy</paper-item></a>
+<paper-item>History</paper-item>
+<paper-item>Geography</paper-item>
+    <!--<paper-item>ATM - Banks</paper-item>
+    <paper-item>Babysitters agency's</paper-item>
+    <paper-item>Bookstores</paper-item>
+    <paper-item>Car Rentals</paper-item>
+    <paper-item>Dentists</paper-item>
+    <paper-item>Doctors</paper-item>
+    <paper-item>Drugstore</paper-item>-->
+</paper-submenu>
+           
+<!-- Transportation -->
+                
+  <paper-submenu>
+     <paper-item class="menu-trigger"><iron-icon icon="icons:flight-land"></iron-icon>Transportation</paper-item>
+    <paper-menu class="menu-content">
+        
+        <paper-item>By air (Sarajevo, Tuzla, Mostar)</paper-item>
+        
+        <a data-route="rail" href="{{baseUrl}}rail">
+            <paper-item>By rail (Sarajevo, Priboj)</paper-item></a>
+        
+        <a data-route="bus" href="{{baseUrl}}bus">
+            <paper-item>By bus (Sarajevo, Gorazde)</paper-item></a>
+    
+        <a data-route="car" href="{{baseUrl}}car">
+            <paper-item>By car (Rent-a-car, taxi, private)</paper-item></a>
+    </paper-menu>
+  </paper-submenu>
+
+
+<!-- Getting Around -->
+
+
+<paper-submenu>
+    <paper-item class="menu-trigger"> <iron-icon icon="maps:directions"></iron-icon>Getting Around</paper-item>
+    <paper-menu class="menu-content">
+    <paper-item>Where to stay</paper-item>
+    <paper-item>Where to eat</paper-item>
+    <paper-item>What to see</paper-item>
+    <paper-item>Where to shop</paper-item>
+    </paper-menu>
+</paper-submenu>
+      
+<!--<paper-submenu>
+    <paper-item class="menu-trigger"><iron-icon icon="visibility"></iron-icon>What to see</paper-item>
+    <paper-menu class="menu-content">
+    <paper-item>Regional tour</paper-item>   
+    <paper-item>City tour (Sarajevo)</paper-item>
+    <paper-item>Town tour</paper-item>
+    <paper-item>Village tour</paper-item>
+    <paper-item>Hamlet Tour</paper-item>
+    <paper-item>Walking tours</paper-item>
+    <paper-item>Biking tours</paper-item>
+    <paper-item>Hiking</paper-item>
+    <paper-item>Riding tours</paper-item>
+    <paper-item>Alpine tours</paper-item>
+    <paper-item>Summer tours</paper-item>
+    <paper-item>Fall tours</paper-item>
+    <paper-item>Autumn tours</paper-item>
+    <paper-item>Historical tours</paper-item>
+    <paper-item>Nature tours</paper-item>
+    </paper-menu>
+</paper-submenu>-->
+    
+    <!-- Where to eat -->
+    
+<!--<paper-submenu>
+    <paper-item class="menu-trigger"><iron-icon icon="maps:local-dining"></iron-icon>Where to eat</paper-item>
+<paper-menu class="menu-content">
+    <paper-item>Breakfast</paper-item>
+    <paper-item>Lunch</paper-item>
+    <paper-item>Dine - Dinner</paper-item>
+</paper-submenu>-->
+    
+    <!-- Where to stay -->
+    
+<!--<paper-submenu>
+    <paper-item class="menu-trigger"><iron-icon icon="maps:local-hotel"></iron-icon>Where to stay</paper-item>
+    <paper-menu class="menu-content">
+    <paper-item>Hotels</paper-item>
+    <paper-item>Motels</paper-item>
+    <paper-item>Hostels</paper-item>
+</paper-submenu>-->
+    
+    
+    <!-- Where to shop -->
+    
+    <!--<paper-submenu>
+    <paper-item class="menu-trigger"><iron-icon icon="maps:local-grocery-store"></iron-icon>Where to shop</paper-item>
+    <paper-menu class="menu-content">
+    <paper-item>Books</paper-item>
+    <paper-item>Glasses</paper-item>
+    <paper-item>Clothes</paper-item>
+    <paper-item>Shoes</paper-item>
+</paper-submenu>-->
+    
+      <!-- Sports and Recreations -->
+    
+<!--<paper-submenu>
+    <paper-item class="menu-trigger"><iron-icon icon="maps:directions-bike"></iron-icon>Sports and Recreations</paper-item>
+    <paper-menu class="menu-content">
+    <paper-item>Where to watch sport</paper-item>
+    <paper-item>Recreation</paper-item>
+</paper-submenu>-->
+    
+  <!--<paper-submenu disabled>
+    <paper-item class="menu-trigger">Unavailable</paper-item>
+    <paper-menu class="menu-content">
+      <paper-item>Disabled 1</paper-item>
+      <paper-item>Disabled 2</paper-item>
+    </paper-menu>
+  </paper-submenu>-->
+
+
+<!--<a data-route="users" href="{{baseUrl}}users">
+            <iron-icon icon="info"></iron-icon>
+            <span>General Info</span>
+</a>-->
+
+<a data-route="contact" href="{{baseUrl}}contact">
+            <iron-icon icon="maps:map"></iron-icon>
+            <span>Maps</span>
+</a>
+<!--<a data-route="contact" href="{{baseUrl}}contact">
+            <iron-icon icon="mail"></iron-icon>
+            <span>Transportation</span>-->
+</a>
+<!--<a data-route="contact" href="{{baseUrl}}contact">
+            <iron-icon icon="mail"></iron-icon>
+            <span>Where to stay</span>
+</a>-->
+<!--<a data-route="contact" href="{{baseUrl}}contact">
+            <iron-icon icon="mail"></iron-icon>
+            <span>Where to eat</span>
+</a>-->
+<!--<a data-route="contact" href="{{baseUrl}}contact">
+            <iron-icon icon="mail"></iron-icon>
+            <span>What to see</span>
+</a>-->
+<!--<a data-route="contact" href="{{baseUrl}}contact">
+            <iron-icon icon="mail"></iron-icon>
+            <span>Where to shop</span>-->
+</a>
+<!--<a data-route="contact" href="{{baseUrl}}contact">
+            <iron-icon icon="maps:terrain"></iron-icon>
+            <span>Around Gorazde</span>
+</a>-->
+<!--<a data-route="contact" href="{{baseUrl}}contact">
+            <iron-icon icon="maps:directions"></iron-icon>
+            <span>Getting around</span>
+</a>-->
+<!--<a data-route="contact" href="{{baseUrl}}contact">
+            <iron-icon icon="mail"></iron-icon>
+            <span>Sports and Recreations</span>
+</a>-->
+<!--            <iron-icon icon="maps:pin-drop"></iron-icon>
+            <span>Events</span>
+</a>-->
+<!--<a data-route="contact" href="{{baseUrl}}contact">
+            <iron-icon icon="maps:local-activity"></iron-icon>
+            <span>Health and Wellness</span>
+</a>-->
+  
+        </paper-menu>
+      </paper-scroll-header-panel>
+
+      <!-- Main Area -->
+      <paper-scroll-header-panel main id="headerPanelMain" condenses keep-condensed-header>
+
+        <!-- Main Toolbar -->
+        <paper-toolbar id="mainToolbar" class="tall">
+          <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
+          <span class="flex"></span>
+
+          <!-- Toolbar icons -->
+          <paper-icon-button icon="refresh"></paper-icon-button>
+          <paper-icon-button icon="search"></paper-icon-button>
+
+          <!-- Application name -->
+<div class="middle middle-container center horizontal layout">
+<div class="app-name">Explore Drinago</div>
+</div>
+
+          <!-- Application sub title -->
+<div class="bottom bottom-container center horizontal layout">
+<div class="bottom-title paper-font-subhead">Visit Gorazde</div>
+</div>
+
+</paper-toolbar>
+
+        <!-- Main Content -->
+<div class="content">
+<iron-pages attr-for-selected="data-route" selected="{{route}}">
+
+<section data-route="home">
+
+<paper-material elevation="5">
+
+<h1 class=paper-font-body3>Editor's notice</h1>
+    
+
+<p align="justify" class=paper-font-body1>This is an early alpha stage of the website. We have chosen to build our website on the foundations of Google's Polymer Web Components. Please, any errors, bugs or any hiccups you may encounter, please let me know at: anelx.colo@gmail.com, thanks!</p>
+    
+<img src="https://silverliningaccessories.files.wordpress.com/2013/05/cropped-header-photo-copy.jpg" height="auto" width="auto" align="center">
+
+    <p align="justify" class=paper-font-body1>This is a <b>Google Polymer app</b>, which means that it can be used as a standalone app, and not just like a regular website. All you have to do, to have a working app on your phone is to press Add to Home Screen in Google Chrome or any other mobile browser. That action will add an Icon to your smartphone home screen, and then you can use the app without ever opening the website in the browser. It is responsive too, so you can use it on any device you have (desktop, laptop, tablet, smartphone)</p>
+    
+<p align="justify" class=paper-font-body1>This website/app is solely dedicated to the tourists who are visiting or who are wishing to visit Bosnia, and in this case the small town of Gorazde. The point of the website is to introduce tourists to the town of Gorazde, people of Gorazde, culture of Gorazde, and so forth.</p>
+</paper-material>
+
+<paper-material elevation="2">
+    
+<h1 class=paper-font-body3>Our vision</h1>
+    
+<p align="justify" class=paper-font-body1>This area needs text. It is just here for getting around the website. Here we should add our vision, and what we expect on the website. We should keep it simple and short, with a little picture as possible.</p>
+</paper-material>
+
+<paper-material elevation="3" class="paper-font-body3">
+    <h1 class=paper-font-body3>Team behind the project</h1>
+    <p align="justify" class=paper-font-body1>We should add a little information about ourselves, who are we, what we do, and what is our role on the website.</p>
+</paper-material>
+
+<paper-material elevation="3" class="paper-font-body3">
+    <h1 class=paper-font-body3>Changelog</h1>
+    
+    <p align="justify" class=paper-font-body1>This is the Drinago changelog so far.</p>
+    
+    <li class=paper-font-body2>Added Menus with submenus;</li>
+    <li class=paper-font-body2>Added clickable links, this is a big one;</li>
+    <li class=paper-font-body2>Added icons to the Main Content area and increased their width and height;</li>
+    <li class=paper-font-body2>Changed colors of the site;</li>
+    <li class=paper-font-body2>Added basic examples, with pictures and tables.</li>
+</paper-material>
+
+</section>
+
+<!-- General Info -->
+    
+<section data-route="ar">
+<paper-material elevation="4">
+    <h1 class="paper-font-body3">Archeology</h1>
+    <p class="paper-font-body1">This area here is intended for Archeology informations</p>
+</paper-material>
+    
+<paper-material elevation="2">
+        
+<h1>Test 1</h1>
+    
+<p class="paper-font-body1">This is just a artefakte test</p>
+</paper-material>
+    
+<paper-material elevation="2">Test</paper-material>
+    
+<paper-material elevation="2">Test</paper-material>
+</section>
+    
+    
+<!-- Transportation infos. --> 
+    
+    <!-- Bus route-->
+    
+<section data-route="bus">
+ 
+<paper-material elevation="2">
+     <h1 align="center">Locations of Bus stops</h1>
+     <p class="paper-font-body1">This area here is intended for an interactive map.</p>
+    <img src="http://www.transitchicago.com/assets/1/page_header_images/680header_bustext.jpg" height="auto" width="auto" align="center"</img>
+</paper-material>  
+   
+<paper-material elevation="4">
+    
+    <img src="http://www.hennessybus.ie/images/bus-coach-header1.gif" height="auto" width="auto" align="center"</img>
+<h1 style="color: gray;" class=paper-font-body4 align="center">Transportation via Bus</h1> 
+<h1 style="color: lightgray;" class=paper-font-body4 align="center">Bus timetable and Locations of Bus stops.</h1>
+
+    <p align="justify" class=paper-font-body1>This area here is intended for bus timetable and map of the Bus stops locations. We should ask travel companies for exact travel timetable. I've added a simple example of a timetable, it is flexible so we can add any information that we want.</p>
+
+    
+    <p align="center">Timetable example</p>
+    <table class="mui-table" align="center">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>City</th>
+<th>Departure</th>
+      <th>Arrival</th>
+        <th>Destination</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Centroprevoz</td>
+      <td>Gorazde</td>
+      <td>08:05h</td>
+      <td>11:30h</td>
+    <td>Sarajevo</td>
+    </tr>
+    <tr>
+      <td>Adria</td>
+      <td>Sarajevo</td>
+      <td>18:00h</td>
+      <td>19:30h</td>
+      <td>Gorazde</td>
+    </tr>
+  </tbody>
+</table>
+</paper-material>
+    
+</section>   
+          
+  <!-- Rail route -->
+    
+<section data-route="rail">
+    
+<paper-material elevation="2">
+     <h1 align="center">Locations of Train stations</h1>
+     <p class="paper-font-body1">This area here is intended for an interactive map.</p>
+    <img src="http://www.mrjayjackson.com/wp-content/uploads/2014/11/TrainHeader.jpg" height="auto" width="auto" align="center"</img>
+</paper-material>  
+   
+<paper-material elevation="4">
+    
+    <!--<img src="http://www.hennessybus.ie/images/bus-coach-header1.gif" height="auto" width="auto" align="center"</img>-->
+<h1 style="color: gray;" class=paper-font-body4 align="center">Transportation via Rail</h1> 
+<!--<h1 style="color: lightgray;" class=paper-font-body4 align="center">Rail timetable</h1>-->
+
+<p align="justify" class=paper-font-body1>This area here is intended for including nearby Train stations and map of their locations.</p>
+    
+   <!-- <p align="center">Timetable example</p>
+    <table class="mui-table" align="center">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>City</th>
+<th>Departure</th>
+      <th>Arrival</th>
+        <th>Destination</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Centroprevoz</td>
+      <td>Gorazde</td>
+      <td>08:05h</td>
+      <td>11:30h</td>
+    <td>Sarajevo</td>
+    </tr>
+    <tr>
+      <td>Adria</td>
+      <td>Sarajevo</td>
+      <td>18:00h</td>
+      <td>19:30h</td>
+      <td>Gorazde</td>
+    </tr>
+  </tbody>
+</table>-->
+</paper-material>
+    
+</section>
+    
+<section data-route="car">
+    
+<paper-material elevation="2">
+     <h1 align="center">Transportation via Car</h1>
+     <p class="paper-font-body1">This area here is intended for an interactive map.</p>
+    <img src="http://www.cityauctiongroup.com/media/car_header.jpg" height="auto" width="auto" align="center"</img>
+</paper-material>  
+   
+<paper-material elevation="4">
+    
+    <!--<img src="http://www.hennessybus.ie/images/bus-coach-header1.gif" height="auto" width="auto" align="center"</img>-->
+<h1 style="color: gray;" class=paper-font-body4 align="center">Transportation via Cars</h1> 
+<!--<h1 style="color: lightgray;" class=paper-font-body4 align="center">Bus timetable and Locations of Bus stops.</h1>-->
+
+    <p align="justify" class=paper-font-body1>Waiting for Ervins text. I am so exausted right now sigh...</p>
+    
+    <!--<p align="center">Timetable example</p>
+    <table class="mui-table" align="center">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>City</th>
+<th>Departure</th>
+      <th>Arrival</th>
+        <th>Destination</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Centroprevoz</td>
+      <td>Gorazde</td>
+      <td>08:05h</td>
+      <td>11:30h</td>
+    <td>Sarajevo</td>
+    </tr>
+    <tr>
+      <td>Adria</td>
+      <td>Sarajevo</td>
+      <td>18:00h</td>
+      <td>19:30h</td>
+      <td>Gorazde</td>
+    </tr>
+  </tbody>
+</table>-->
+</paper-material>
+    
+    
+</section>
+    
+<section data-route="users">
+
+<h2 class="page-title" align="center">Nekropola stecaka Gorsic Polje</h2>
+
+<paper-card><div align="justify" class="card-content">This area here is intended for general informations about the city and many more. Here you will see some basic information about Gorsic Polje</div>
+    </paper-card>
+
+
+ <paper-card heading="Goršić polje!" class="pink"
+                image="http://i.imgur.com/aXGraR6.jpg">
+      <div align="justify" class="card-content">
+       Na području gornjodrinske regije srednjovjekovni kameni nadgrobni spomenici stećci predstavljaju najbrojnije materijalne ostatke u poređenju sa spomenicima iz drugih epoha. Stećci su najsnažniji kulturološki, umjetnički i ekonomski izraz srednjeg vijeka u gornjem toku rijeke Drine. Njihova brojnost upućuje na zaključak da je ove prostore naseljavao veći broj stanovništva tokom srednjeg vijeka. I pored činjenice da na ovom prostoru postoji značajan broj nekropola, postoje i takvi lokaliteti koji do sada nisu bili zabilježeni. Najveći broj nekropola sa stećcima se krije po kosama i uzvišenjima na nepristupačnim planinama i brdima do kojih vode veoma loše putne komunikacije.
+Nekropola stećaka u Goršić polju, općina Goražde, do sada nije bila registrovana i kao takva nije bila poznata naučnim radnicima. Jedini zabilježeni podatak o ovoj nekropoli nalazi se u knjizi Rasima Živojevića Ilovača predio kod Goražda gdje navodi da je najveća na ovim prostorima koja broji 398 stećaka. Tokom 2010. godine nekropola je prijavljena Komisiji za očuvanje spomenika Bosne i Hercegovine koja je istu proglasila Nacionalnim spomenikom.
+Prema svojoj brojnosti, rasporedu, raznovrsnosti i kvalitetu obrade stećaka važi za neprocjenjljivo bogatstvo i predstavlja važan materijalni dokaz srednjovjekovne prošlosti na ovom prostoru. Do sada je urađeno fotografiranje i prebrojavanje stećaka, kada je i uočeno da se dvadesetak stećaka nalazi u opasnosti jer su se spustili iznad puta i moguće je njihovo dalje klizanje i propadanje preko strme strane brda. </div>
+</paper-card>
+
+ <paper-card heading="Goršić polje!" class="pink"
+                image="http://picresize.com/images/rsz_428092_304479226273370_1275274864_n.png">
+      <div align="justify" class="card-content">
+       Nekropola je urađena sa velikom preciznošću tako da su stećci postavljani u polukružne redove koje se od vrha šire prema dnu. Iako je prošlo dosta vremena od kada je nastala može se sa lakoćom utvrditi da su stećci planski postavljeni. Rastojanje između stećaka je gotovo identično, s tim što je njihov raspored ugrožava gusta šuma, čije korjenje od stabla utjecalo na dodatno tonjenje i pomjeranje. Svi stećci su prekriveni debljim slojem mahovine a njih oko dvadesetak je djelimično očišćeno na kojima se nalaze ukrasi sa ljiljanima, jelenom, srpom, zvijezdama a nalazi se i jedan stećak s natpisom. Lokalni put presjeca nekropolu na dva dijela, kojom prilikom je i uništen jedan broja stećaka. Prvi dio, ili južna strana, nekropole obuhvata prostor od 50mx25m gdje se nalazi 37 stećaka. Drugi dio nekropole je udaljen 60m i pokriva prostor od 100mx30m gdje se nalazi 318 stećaka. Svi stećci su u ležećem položaju među kojima se nalazi 69 sljemenjaka, 271 sanduk i 15 ploča. Orijentacija stećaka je različita i kreće se u pravcu S-J i Z-I. U oba dijela nekropole se nalazi po jedan visoki sanduk. Među ovim brojem stećaka za sada je nemoguće utvrditi koliko njih ima postolje pošto ih je većina utonula u zemlju. Osim navedenog posebnim se izdvaja i vještina majstora-kovača koji su klesali stećke jer su svi dobro obrađeni.</div>
+</paper-card>
+
+    
+
+<paper-card><div align="justify" class="card-content">Ovu nekropolu bilo bi neophodno zaštiti tako da se brojnost stećaka ne smanjuje, jer 60-tih godina XX stoljeća Rasim Živojević je naveo da se tu nalazilo 398 stećaka a sada ih je 355. Među ovih 355 stećaka nalazi se njih oko 50-tak koji su u dobroj mjeri oštećeni što pokazuje da bi se brojnost nekropole stećaka Goršić polje mogla i dalje smanjivati.
+
+    Eldin Baljević</div></paper-card>
+
+</section>
+
+<section data-route="user-info">
+    
+<paper-material elevation="1">
+<h2 class="page-title">User: {{params.name}}</h2>
+<div>This is {{params.name}}'s section</div>
+</paper-material>
+    
+</section>
+
+<section data-route="contact">
+<paper-material elevation="1">
+<h2 class="page-title">Maps</h2>
+<p>This is the maps section.</p>
+</paper-material>
+
+<paper-material>
+Map 1: Example 1    
+</paper-material>
+
+<paper-material>
+Map 2: Example 2  
+</paper-material>
+
+<paper-material>
+Map 3: Example 3    
+</paper-material>
+
+<paper-material>
+Map 4: Example 4    
+</paper-material>
+
+</section>
+
+          </iron-pages>
+        </div>
+      </paper-scroll-header-panel>
+    </paper-drawer-panel>
+
+    <paper-toast id="toast">
+      <span class="toast-hide-button" role="button" tabindex="0" onclick="app.$.toast.hide()">Ok</span>
+    </paper-toast>
+
+<!-- Ne diraj ovu sekciju -->
+
+    <!-- Uncomment next block to enable Service Worker support (1/2) -->
+    
+    <paper-toast id="caching-complete"
+                 duration="6000"
+                 text="Caching is complete! This app will work offline.">
+    </paper-toast>
+
+    <platinum-sw-register auto-register
+                          clients-claim
+                          skip-waiting
+                          on-service-worker-installed="displayInstalledToast">
+      <platinum-sw-cache default-cache-strategy="networkFirst"
+                         cache-config-file="cache-config.json">
+      </platinum-sw-cache>
+    </platinum-sw-register>
+    
+
+  </template>
+
+  <!-- build:js scripts/app.js -->
+  <script src="scripts/app.js"></script>
+  <!-- endbuild-->
+</body>
+
+</html>

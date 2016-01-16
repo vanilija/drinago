@@ -63,23 +63,25 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 </head>
 
 <body unresolved class="fullbleed layout vertical">
-  <span id="browser-sync-binding"></span>
-  <template is="dom-bind" id="app">
+    <span id="browser-sync-binding"></span>
+<template is="dom-bind" id="app">
 
-    <paper-drawer-panel id="paperDrawerPanel" responsive-width="900px">
-      <!-- Drawer Scroll Header Panel -->
-      <paper-scroll-header-panel drawer fixed>
+<paper-drawer-panel id="paperDrawerPanel" responsive-width="900px">
+     
+    <!-- Drawer Scroll Header Panel -->
+     
+<paper-scroll-header-panel drawer fixed>
 
-        <!-- Drawer Toolbar -->
-        <paper-toolbar id="drawerToolbar">
-          <span class="paper-font-title">Home</span>
-        </paper-toolbar>
+    <!-- Drawer Toolbar -->
+        
+<paper-toolbar id="drawerToolbar">
+    <span class="paper-font-title">Home</span>
+</paper-toolbar>
 
         <!-- Drawer Content -->
        
-          <!-- Paper Menu & submenu -->
-          
-          
+        <!-- Paper Menu & submenu -->
+            
 <paper-menu class="list" attr-for-selected="data-route" selected="[[route]]">
 <a data-route="home" href="{{baseUrl}}">
     <iron-icon icon="bookmark"></iron-icon>
@@ -334,12 +336,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <!-- General Info -->
     
-<section data-route="ar">
+<section data-route="ar">    
+
+    
 <paper-material elevation="4">
     <h1 class="paper-font-body3">Archeology</h1>
     <p class="paper-font-body1">This area here is intended for Archeology informations</p>
-</paper-material>
-    
+    </paper-material>
+       
 <paper-material elevation="2">
         
 <h1>Test 1</h1>
@@ -350,6 +354,27 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <paper-material elevation="2">Test</paper-material>
     
 <paper-material elevation="2">Test</paper-material>
+    </paper-material>
+        <style>
+        iron-pages {
+            border: 1px solid #ccc;
+            border-top: none;
+            padding: 1px;
+        }
+    </style>
+ <paper-tabs selected="{{selected}}">
+      <paper-tab>About</paper-tab>
+      <paper-tab>For who</paper-tab>
+      <paper-tab>Our recommendations</paper-tab>
+    </paper-tabs>
+    <iron-pages selected="{{selected}}">
+      <div align="justify">   <img src="http://www.freewebheaders.com/wordpress/wp-content/gallery/beautiful-landscape/unique-lake-snow-mountain-clouds-nature-landscape-web-header.jpg"></img>Ovo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je test</div>
+        
+    
+      <div align="justify">   <img src="http://www.freewebheaders.com/wordpress/wp-content/gallery/beautiful-landscape/unique-lake-snow-mountain-clouds-nature-landscape-web-header.jpg"></img>Ovo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je test</div>
+      <div align="justify">   <img src="http://www.freewebheaders.com/wordpress/wp-content/gallery/beautiful-landscape/unique-lake-snow-mountain-clouds-nature-landscape-web-header.jpg"></img>Ovo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je test</div>
+    </iron-pages>
+   
 </section>
     
 <!-- Transportation infos. --> 

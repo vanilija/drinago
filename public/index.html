@@ -63,38 +63,39 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 </head>
 
 <body unresolved class="fullbleed layout vertical">
-  <span id="browser-sync-binding"></span>
-  <template is="dom-bind" id="app">
+    <span id="browser-sync-binding"></span>
+<template is="dom-bind" id="app">
 
-    <paper-drawer-panel id="paperDrawerPanel" responsive-width="900px">
-      <!-- Drawer Scroll Header Panel -->
-      <paper-scroll-header-panel drawer fixed>
+<paper-drawer-panel id="paperDrawerPanel" responsive-width="900px">
+     
+    <!-- Drawer Scroll Header Panel -->
+     
+<paper-scroll-header-panel drawer fixed>
 
-        <!-- Drawer Toolbar -->
-        <paper-toolbar id="drawerToolbar">
-          <span class="paper-font-title">Home</span>
-        </paper-toolbar>
+    <!-- Drawer Toolbar -->
+        
+<paper-toolbar id="drawerToolbar">
+    <span class="paper-font-title">Home</span>
+</paper-toolbar>
 
         <!-- Drawer Content -->
        
-          <!-- Paper Menu & submenu -->
-          
-          
-          <paper-menu class="list" attr-for-selected="data-route" selected="[[route]]">
+        <!-- Paper Menu & submenu -->
+            
+<paper-menu class="list" attr-for-selected="data-route" selected="[[route]]">
 <a data-route="home" href="{{baseUrl}}">
-            <iron-icon icon="bookmark"></iron-icon>
-            <span>Welcome</span>
+    <iron-icon icon="bookmark"></iron-icon>
+    <span>Welcome</span>
 </a>
-            <paper-menu>
+<paper-menu>
                 
-
 <!-- General Info -->
                 
 <paper-submenu>
     <paper-item class="menu-trigger"><iron-icon icon="explore"></iron-icon>General Info</paper-item>
     <paper-menu class="menu-content">
         
-    <!--<a data-route="car" href="{{baseUrl}}car"><paper-item>Archaeology</paper-item>-->
+<!--<a data-route="car" href="{{baseUrl}}car"><paper-item>Archaeology</paper-item>-->
         
 <paper-item>Geology</paper-item>
 <a data-route="ar" href="{{baseUrl}}ar"><paper-item>Archelogy</paper-item></a>
@@ -111,26 +112,20 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
            
 <!-- Transportation -->
                 
-  <paper-submenu>
-     <paper-item class="menu-trigger"><iron-icon icon="icons:flight-land"></iron-icon>Transportation</paper-item>
+<paper-submenu>
+    <paper-item class="menu-trigger"><iron-icon icon="icons:flight-land"></iron-icon>Transportation</paper-item>
     <paper-menu class="menu-content">
-        
-        <paper-item>By air (Sarajevo, Tuzla, Mostar)</paper-item>
-        
-        <a data-route="rail" href="{{baseUrl}}rail">
-            <paper-item>By rail (Sarajevo, Priboj)</paper-item></a>
-        
-        <a data-route="bus" href="{{baseUrl}}bus">
-            <paper-item>By bus (Sarajevo, Gorazde)</paper-item></a>
-    
-        <a data-route="car" href="{{baseUrl}}car">
-            <paper-item>By car (Rent-a-car, taxi, private)</paper-item></a>
-    </paper-menu>
-  </paper-submenu>
-
+    <paper-item>By air (Sarajevo, Tuzla, Mostar)</paper-item>
+    <a data-route="rail" href="{{baseUrl}}rail">
+    <paper-item>By rail (Sarajevo, Priboj)</paper-item></a>
+    <a data-route="bus" href="{{baseUrl}}bus">
+    <paper-item>By bus (Sarajevo, Gorazde)</paper-item></a>
+    <a data-route="car" href="{{baseUrl}}car">
+    <paper-item>By car (Rent-a-car, taxi, private)</paper-item></a>
+</paper-menu>
+</paper-submenu>
 
 <!-- Getting Around -->
-
 
 <paper-submenu>
     <paper-item class="menu-trigger"> <iron-icon icon="maps:directions"></iron-icon>Getting Around</paper-item>
@@ -182,7 +177,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <paper-item>Motels</paper-item>
     <paper-item>Hostels</paper-item>
 </paper-submenu>-->
-    
     
     <!-- Where to shop -->
     
@@ -261,28 +255,32 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <iron-icon icon="maps:local-activity"></iron-icon>
             <span>Health and Wellness</span>
 </a>-->
-  
-        </paper-menu>
-      </paper-scroll-header-panel>
+</paper-menu>
+</paper-scroll-header-panel>
 
       <!-- Main Area -->
-      <paper-scroll-header-panel main id="headerPanelMain" condenses keep-condensed-header>
+        
+<paper-scroll-header-panel main id="headerPanelMain" condenses keep-condensed-header>
 
-        <!-- Main Toolbar -->
-        <paper-toolbar id="mainToolbar" class="tall">
-          <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
-          <span class="flex"></span>
+      <!-- Main Toolbar -->
+    
+<paper-toolbar id="mainToolbar" class="tall">
+    <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
+    <span class="flex"></span>
 
-          <!-- Toolbar icons -->
-          <paper-icon-button icon="refresh"></paper-icon-button>
-          <paper-icon-button icon="search"></paper-icon-button>
+      <!-- Toolbar icons -->
+    
+     <paper-icon-button icon="refresh"></paper-icon-button>
+     <paper-icon-button icon="search"></paper-icon-button>
 
-          <!-- Application name -->
+      <!-- Application name -->
+    
 <div class="middle middle-container center horizontal layout">
 <div class="app-name">Explore Drinago</div>
 </div>
 
-          <!-- Application sub title -->
+       <!-- Application sub title -->
+    
 <div class="bottom bottom-container center horizontal layout">
 <div class="bottom-title paper-font-subhead">Visit Gorazde</div>
 </div>
@@ -290,6 +288,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 </paper-toolbar>
 
         <!-- Main Content -->
+    
 <div class="content">
 <iron-pages attr-for-selected="data-route" selected="{{route}}">
 
@@ -299,12 +298,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <h1 class=paper-font-body3>Editor's notice</h1>
     
-
 <p align="justify" class=paper-font-body1>This is an early alpha stage of the website. We have chosen to build our website on the foundations of Google's Polymer Web Components. Please, any errors, bugs or any hiccups you may encounter, please let me know at: anelx.colo@gmail.com, thanks!</p>
     
 <img src="https://silverliningaccessories.files.wordpress.com/2013/05/cropped-header-photo-copy.jpg" height="auto" width="auto" align="center">
 
-    <p align="justify" class=paper-font-body1>This is a <b>Google Polymer app</b>, which means that it can be used as a standalone app, and not just like a regular website. All you have to do, to have a working app on your phone is to press Add to Home Screen in Google Chrome or any other mobile browser. That action will add an Icon to your smartphone home screen, and then you can use the app without ever opening the website in the browser. It is responsive too, so you can use it on any device you have (desktop, laptop, tablet, smartphone)</p>
+<p align="justify" class=paper-font-body1>This is a <b>Google Polymer app</b>, which means that it can be used as a standalone app, and not just like a regular website. All you have to do, to have a working app on your phone is to press Add to Home Screen in Google Chrome or any other mobile browser. That action will add an Icon to your smartphone home screen, and then you can use the app without ever opening the website in the browser. It is responsive too, so you can use it on any device you have (desktop, laptop, tablet, smartphone)</p>
     
 <p align="justify" class=paper-font-body1>This website/app is solely dedicated to the tourists who are visiting or who are wishing to visit Bosnia, and in this case the small town of Gorazde. The point of the website is to introduce tourists to the town of Gorazde, people of Gorazde, culture of Gorazde, and so forth.</p>
 </paper-material>
@@ -331,18 +329,21 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <li class=paper-font-body2>Added icons to the Main Content area and increased their width and height;</li>
     <li class=paper-font-body2>Changed colors of the site;</li>
     <li class=paper-font-body2>Added basic examples, with pictures and tables.</li>
+    
 </paper-material>
 
 </section>
 
 <!-- General Info -->
     
-<section data-route="ar">
+<section data-route="ar">    
+
+    
 <paper-material elevation="4">
     <h1 class="paper-font-body3">Archeology</h1>
     <p class="paper-font-body1">This area here is intended for Archeology informations</p>
-</paper-material>
-    
+    </paper-material>
+       
 <paper-material elevation="2">
         
 <h1>Test 1</h1>
@@ -353,8 +354,28 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <paper-material elevation="2">Test</paper-material>
     
 <paper-material elevation="2">Test</paper-material>
-</section>
+    </paper-material>
+        <style>
+        iron-pages {
+            border: 1px solid #ccc;
+            border-top: none;
+            padding: 1px;
+        }
+    </style>
+ <paper-tabs selected="{{selected}}">
+      <paper-tab>About</paper-tab>
+      <paper-tab>For who</paper-tab>
+      <paper-tab>Our recommendations</paper-tab>
+    </paper-tabs>
+    <iron-pages selected="{{selected}}">
+      <div align="justify">   <img src="http://www.freewebheaders.com/wordpress/wp-content/gallery/beautiful-landscape/unique-lake-snow-mountain-clouds-nature-landscape-web-header.jpg"></img>Ovo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je test</div>
+        
     
+      <div align="justify">   <img src="http://www.freewebheaders.com/wordpress/wp-content/gallery/beautiful-landscape/unique-lake-snow-mountain-clouds-nature-landscape-web-header.jpg"></img>Ovo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je test</div>
+      <div align="justify">   <img src="http://www.freewebheaders.com/wordpress/wp-content/gallery/beautiful-landscape/unique-lake-snow-mountain-clouds-nature-landscape-web-header.jpg"></img>Ovo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je test</div>
+    </iron-pages>
+   
+</section>
     
 <!-- Transportation infos. --> 
     
@@ -365,18 +386,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <paper-material elevation="2">
      <h1 align="center">Locations of Bus stops</h1>
      <p class="paper-font-body1">This area here is intended for an interactive map.</p>
-    <img src="http://www.transitchicago.com/assets/1/page_header_images/680header_bustext.jpg" height="auto" width="auto" align="center"</img>
+<img src="http://www.transitchicago.com/assets/1/page_header_images/680header_bustext.jpg" height="auto" width="auto" align="center"</img>
 </paper-material>  
    
 <paper-material elevation="4">
     
-    <img src="http://www.hennessybus.ie/images/bus-coach-header1.gif" height="auto" width="auto" align="center"</img>
+<img src="http://www.hennessybus.ie/images/bus-coach-header1.gif" height="auto" width="auto" align="center"</img>
 <h1 style="color: gray;" class=paper-font-body4 align="center">Transportation via Bus</h1> 
 <h1 style="color: lightgray;" class=paper-font-body4 align="center">Bus timetable and Locations of Bus stops.</h1>
 
-    <p align="justify" class=paper-font-body1>This area here is intended for bus timetable and map of the Bus stops locations. We should ask travel companies for exact travel timetable. I've added a simple example of a timetable, it is flexible so we can add any information that we want.</p>
+<p align="justify" class=paper-font-body1>This area here is intended for bus timetable and map of the Bus stops locations. We should ask travel companies for exact travel timetable. I've added a simple example of a timetable, it is flexible so we can add any information that we want.</p>
 
-    
     <p align="center">Timetable example</p>
     <table class="mui-table" align="center">
   <thead>
@@ -406,7 +426,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   </tbody>
 </table>
 </paper-material>
-    
 </section>   
           
   <!-- Rail route -->
@@ -416,7 +435,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <paper-material elevation="2">
      <h1 align="center">Locations of Train stations</h1>
      <p class="paper-font-body1">This area here is intended for an interactive map.</p>
-    <img src="http://www.mrjayjackson.com/wp-content/uploads/2014/11/TrainHeader.jpg" height="auto" width="auto" align="center"</img>
+<img src="http://www.mrjayjackson.com/wp-content/uploads/2014/11/TrainHeader.jpg" height="auto" width="auto" align="center"</img>
 </paper-material>  
    
 <paper-material elevation="4">
@@ -464,16 +483,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <paper-material elevation="2">
      <h1 align="center">Transportation via Car</h1>
      <p class="paper-font-body1">This area here is intended for an interactive map.</p>
-    <img src="http://www.cityauctiongroup.com/media/car_header.jpg" height="auto" width="auto" align="center"</img>
+     <img src="http://www.cityauctiongroup.com/media/car_header.jpg" height="auto" width="auto" align="center"</img>
 </paper-material>  
    
 <paper-material elevation="4">
-    
+
     <!--<img src="http://www.hennessybus.ie/images/bus-coach-header1.gif" height="auto" width="auto" align="center"</img>-->
 <h1 style="color: gray;" class=paper-font-body4 align="center">Transportation via Cars</h1> 
 <!--<h1 style="color: lightgray;" class=paper-font-body4 align="center">Bus timetable and Locations of Bus stops.</h1>-->
 
-    <p align="justify" class=paper-font-body1>Waiting for Ervins text. I am so exausted right now sigh...</p>
+<p align="justify" class=paper-font-body1>Waiting for Ervins text. I am so exausted right now sigh...</p>
     
     <!--<p align="center">Timetable example</p>
     <table class="mui-table" align="center">

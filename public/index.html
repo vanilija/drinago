@@ -60,6 +60,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <style is="custom-style" include="shared-styles"></style>
 <link rel="import" href="bower_components/paper-card/paper-card.html">
 <link rel="import" href="bower_components/paper-button/paper-button.html">
+
 </head>
 
 <body unresolved class="fullbleed layout vertical">
@@ -115,13 +116,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <paper-submenu>
     <paper-item class="menu-trigger"><iron-icon icon="icons:flight-land"></iron-icon>Transportation</paper-item>
     <paper-menu class="menu-content">
-    <paper-item>By air (Sarajevo, Tuzla, Mostar)</paper-item>
+    <paper-item>By air</paper-item>
     <a data-route="rail" href="{{baseUrl}}rail">
-    <paper-item>By rail (Sarajevo, Priboj)</paper-item></a>
+    <paper-item>By rail</paper-item></a>
     <a data-route="bus" href="{{baseUrl}}bus">
-    <paper-item>By bus (Sarajevo, Gorazde)</paper-item></a>
+    <paper-item>By bus</paper-item></a>
     <a data-route="car" href="{{baseUrl}}car">
-    <paper-item>By car (Rent-a-car, taxi, private)</paper-item></a>
+    <paper-item>By car</paper-item></a>
 </paper-menu>
 </paper-submenu>
 
@@ -130,33 +131,40 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <paper-submenu>
     <paper-item class="menu-trigger"> <iron-icon icon="maps:directions"></iron-icon>Getting Around</paper-item>
     <paper-menu class="menu-content">
+    <paper-item>Seasons</paper-item>
     <paper-item>Where to stay</paper-item>
+    <paper-item>Where to shop</paper-item>
     <paper-item>Where to eat</paper-item>
     <paper-item>What to see</paper-item>
-    <paper-item>Where to shop</paper-item>
+    <paper-item>What to do</paper-item>
     </paper-menu>
 </paper-submenu>
       
-<!--<paper-submenu>
-    <paper-item class="menu-trigger"><iron-icon icon="visibility"></iron-icon>What to see</paper-item>
+<paper-submenu>
+    <paper-item class="menu-trigger"><iron-icon icon="visibility"></iron-icon>Tours</paper-item>
     <paper-menu class="menu-content">
     <paper-item>Regional tour</paper-item>   
-    <paper-item>City tour (Sarajevo)</paper-item>
+    <!--<paper-item>City tour (Sarajevo)</paper-item>-->
     <paper-item>Town tour</paper-item>
+        <!--Gorazde, Foca, Visegrad, Rogatica, Cajnice, Rudo, Ustikolina, Praca, Novo Gorazde, -->
+    
     <paper-item>Village tour</paper-item>
     <paper-item>Hamlet Tour</paper-item>
     <paper-item>Walking tours</paper-item>
     <paper-item>Biking tours</paper-item>
     <paper-item>Hiking</paper-item>
     <paper-item>Riding tours</paper-item>
-    <paper-item>Alpine tours</paper-item>
-    <paper-item>Summer tours</paper-item>
+    <!--<paper-item>Alpine tours</paper-item>-->
+        
+        <!--<paper-item>Summer tours</paper-item>
     <paper-item>Fall tours</paper-item>
-    <paper-item>Autumn tours</paper-item>
-    <paper-item>Historical tours</paper-item>
+    <paper-item>Autumn tours</paper-item>-->
+        
+        
+    <!--<paper-item>Historical tours</paper-item>
     <paper-item>Nature tours</paper-item>
-    </paper-menu>
-</paper-submenu>-->
+    </paper-menu>-->
+</paper-submenu>
     
     <!-- Where to eat -->
     
@@ -300,6 +308,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     
 <p align="justify" class=paper-font-body1>This is an early alpha stage of the website. We have chosen to build our website on the foundations of Google's Polymer Web Components. Please, any errors, bugs or any hiccups you may encounter, please let me know at: anelx.colo@gmail.com, thanks!</p>
     
+
+
+    
+    
 <img src="https://silverliningaccessories.files.wordpress.com/2013/05/cropped-header-photo-copy.jpg" height="auto" width="auto" align="center">
 
 <p align="justify" class=paper-font-body1>This is a <b>Google Polymer app</b>, which means that it can be used as a standalone app, and not just like a regular website. All you have to do, to have a working app on your phone is to press Add to Home Screen in Google Chrome or any other mobile browser. That action will add an Icon to your smartphone home screen, and then you can use the app without ever opening the website in the browser. It is responsive too, so you can use it on any device you have (desktop, laptop, tablet, smartphone)</p>
@@ -340,7 +352,34 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     
 <paper-material elevation="4">
-    <h1 class="paper-font-body3">Archeology</h1>
+    <h1 class="paper-font-body3" align="center">Archeology</h1>
+    <hr>
+    <paper-submenu>
+    <paper-item class="menu-trigger"><iron-icon icon="maps:directions"></iron-icon>Getting Around</paper-item>
+    <paper-menu class="menu-content">
+    <paper-item>test</paper-item>
+   
+    </paper-menu>
+</paper-submenu>
+    
+    <!--<div dir="rtl">
+      <paper-tabs selected="0" scrollable>
+
+        <paper-tab>NUMBER ONE ITEM</paper-tab>
+        <paper-tab>ITEM TWO</paper-tab>
+        <paper-tab>THE THIRD ITEM</paper-tab>
+        <paper-tab>THE ITEM FOUR</paper-tab>
+        <paper-tab>FIFTH</paper-tab>
+        <paper-tab>THE SIXTH TAB</paper-tab>
+        <paper-tab>NUMBER SEVEN</paper-tab>
+        <paper-tab>EIGHT</paper-tab>
+        <paper-tab>NUMBER NINE</paper-tab>
+        <paper-tab>THE TENTH</paper-tab>
+        <paper-tab>THE ITEM ELEVEN</paper-tab>
+        <paper-tab>TWELFTH ITEM</paper-tab>
+
+      </paper-tabs>
+    </div>-->
     <p class="paper-font-body1">This area here is intended for Archeology informations</p>
     </paper-material>
        
@@ -367,14 +406,25 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <paper-tab>For who</paper-tab>
       <paper-tab>Our recommendations</paper-tab>
     </paper-tabs>
+    
+    <hr>
+    
+    <paper-material elevation="2"><h1 align="center">Spring</h1>
+    
+    
+    </paper-material>
+
     <iron-pages selected="{{selected}}">
-      <div align="justify">   <img src="http://www.freewebheaders.com/wordpress/wp-content/gallery/beautiful-landscape/unique-lake-snow-mountain-clouds-nature-landscape-web-header.jpg"></img>Ovo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je test</div>
+        
+      <div align="justify">Slika<img src="http://www.freewebheaders.com/wordpress/wp-content/gallery/beautiful-landscape/unique-lake-snow-mountain-clouds-nature-landscape-web-header.jpg"></img>Ovo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je test</div>
         
     
       <div align="justify">   <img src="http://www.freewebheaders.com/wordpress/wp-content/gallery/beautiful-landscape/unique-lake-snow-mountain-clouds-nature-landscape-web-header.jpg"></img>Ovo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je test</div>
       <div align="justify">   <img src="http://www.freewebheaders.com/wordpress/wp-content/gallery/beautiful-landscape/unique-lake-snow-mountain-clouds-nature-landscape-web-header.jpg"></img>Ovo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je test</div>
     </iron-pages>
    
+    
+    
 </section>
     
 <!-- Transportation infos. --> 
@@ -569,8 +619,36 @@ Prema svojoj brojnosti, rasporedu, raznovrsnosti i kvalitetu obrade steÄ‡aka vaÅ
 <section data-route="contact">
 <paper-material elevation="1">
 <h2 class="page-title">Maps</h2>
-<p>This is the maps section.</p>
+<p>This section is intended for different types of maps. For now, we added only one example of Gorazde map via Google Map.</p>
+    
 </paper-material>
+    
+<paper-material> 
+    
+    <h2 align="center" class="page-title">Gorazde Map</h2>
+    <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth=""width="100%" height="400" src="https://maps.google.com/maps?hl=en&q=Gorazde&ie=UTF8&t=terrain&z=16&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">
+									embedgooglemaps.com
+							</a></small></div><div><small><a href="http://googlemapsgenerator.com/">Google maps generator</a></small></div></iframe>
+    
+    </paper-material>
+    
+    
+        <!--<paper-material>
+<style>
+  google-map {
+      display: block;
+    height: 800px;
+      
+  }
+</style>
+<!--<google-map disable-default-ui zoom="15" latitude="43.666667" longitude="18.983333"></google-map>-->
+    
+    <!--<google-map latitude="43.6667" longitude="18.9833" zoom="9">
+    
+  
+ </google-map>-->
+    
+          </paper-material>
 
 <paper-material>
 Map 1: Example 1    

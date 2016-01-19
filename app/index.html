@@ -75,6 +75,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <span id="browser-sync-binding"></span>
 <template is="dom-bind" id="app">
 
+    <!-- FB CODE -->
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+    
+   <!-- FB CODE -->
 <paper-drawer-panel id="paperDrawerPanel" responsive-width="900px">
      
     <!-- Drawer Scroll Header Panel -->
@@ -615,11 +626,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <section data-route="contact">
 <paper-material elevation="4" class="boja">
 <h2 class="page-title">Maps</h2>
-<p>This section is intended for different types of maps. For now, we added only one example of Gorazde map via Google Map.</p>
-   
+    <p align="justify">Map category is a big category. We should add one general map with points of <b>interests.</b></p>
+    <p align="justify"> Our idea is to create subcategories with different meanings. For example, add category for walking only and then add walking paths via <b>Google My Map.</b> Then add driving paths, parking places, bus stops, and even add additional information about how far is the distance between place A and place B. Google My Map is very powerful, so we should make our best to make amazing and very thorough information.</p>
 </paper-material>
 
-    
+   
     <!-- Unused code, waiting for deletion -->
     
 <!--<paper-material elevation="3"> 
@@ -634,8 +645,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <style>
   google-map {
       display: block;
-    height: 800px;
-      
+    height: 800px;   
   }
 </style>
 <!--<google-map disable-default-ui zoom="15" latitude="43.666667" longitude="18.983333"></google-map>-->
@@ -681,12 +691,27 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 							</a></small></div><div><small><a href="http://googlemapsgenerator.com/">Google maps generator</a></small></div></iframe>-->
     
     <!-- End of unused code ready for deletion -->
-   
-    <paper-material>
-    <h3 align="center">Walking Path in Gorazde - example</p>
+  
+<paper-material elevation="3">
+  <h3 align="center">Walking Path in Gorazde - example</h3>
+    <p>In map example below i have drawn a simple line from place A to place B, while marking it as Walking Path, which it really is. Like this, we should place lines for general directions, points of interests etc.</p>
     </paper-material>
+
     
-    <iframe src="https://mapsengine.google.com/map/embed?mid=zYnnE4Fq5m2A.kLLYAlIy0NFE" width="100%" height="480"></iframe>
+
+      <iframe src="https://mapsengine.google.com/map/embed?mid=zYnnE4Fq5m2A.kLLYAlIy0NFE" width="100%" height="480"></iframe>
+    
+<!-- FB komentari -->
+    
+    <paper-material elevation="3">
+        <p align="center" class=paper-font-body3>Section for review or comments. This is facebook system, which means that you need to have a facebook profile in order to comment. We are trying to implement a different solution, but for now, this works.</p>
+        </paper-material>
+    <paper-material>
+        <div class="fb-comments" data-href="https://drinago10.firebaseapp.com/#!/contact" data-width="100%" data-numposts="5"></div></paper-material>
+    
+   
+<!-- Kraj FB komentara -->
+    
     
     <!-- Kraj Sekcije Maps -->
     

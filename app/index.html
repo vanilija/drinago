@@ -12,6 +12,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <html lang="">
 
 <head>
+ 
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css"/>
     <script type="text/javascript" src="//scribblemaps.com/api/js/"></script>
     <script type="text/javascript">
@@ -104,150 +105,157 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             
 <paper-menu class="list" attr-for-selected="data-route" selected="[[route]]">
 <a data-route="home" href="{{baseUrl}}">
-    <iron-icon icon="bookmark"></iron-icon>
+    <iron-icon src="https://maxcdn.icons8.com/Color/PNG/24/Very_Basic/home-24.png" ></iron-icon>
+    <paper-ripple></paper-ripple>
     <span>Welcome</span>
 </a>
 <paper-menu>
                 
 <!-- General Info -->
-                
+<link rel="import" href="../app/paper-ripple.html">
+    
 <paper-submenu>
-    <paper-item class="menu-trigger"><iron-icon icon="explore"></iron-icon>General Info</paper-item>
-    <paper-menu class="menu-content">
+    <paper-item class="menu-trigger"><iron-icon icon="explore"></iron-icon>  
+        <paper-ripple></paper-ripple>
+        <span>General Info</span></paper-item>
+<paper-menu class="menu-content">
         
-<!--<a data-route="car" href="{{baseUrl}}car"><paper-item>Archaeology</paper-item>-->
+
     <a data-route="bi" href="{{baseUrl}}bi">
-        <paper-item>Basic Info</paper-item></a>
+        <paper-item><span>Basic Info</span></paper-item></a>
     <a data-route="geology" href="{{baseUrl}}geology">
-        <paper-item>Geology</paper-item></a>
+        <paper-item><span>Geology</span></paper-item></a>
     <a data-route="ar" href="{{baseUrl}}ar">
-        <paper-item>Archeology</paper-item></a>
+        <paper-item><span>Archeology</span></paper-item></a>
     <a data-route="his" href="{{baseUrl}}his">
-        <paper-item>History</paper-item></a>
+        <paper-item><span>History</span></paper-item></a>
     <a data-route="geography" href="{{baseUrl}}geography">
-        <paper-item>Geography</paper-item></a>
-    <!--<paper-item>ATM - Banks</paper-item>
-    <paper-item>Babysitters agency's</paper-item>
-    <paper-item>Bookstores</paper-item>
-    <paper-item>Car Rentals</paper-item>
-    <paper-item>Dentists</paper-item>
-    <paper-item>Doctors</paper-item>
-    <paper-item>Drugstore</paper-item>-->
+        <paper-item><span>Geography</span></paper-item></a>
+
 </paper-submenu>
            
-<!-- Transportation -->
+    <!-- Transportation -->
                 
 <paper-submenu>
-    <paper-item class="menu-trigger"><iron-icon icon="icons:flight-land"></iron-icon>Transportation</paper-item>
+    
+    <paper-item class="menu-trigger"><iron-icon icon="icons:flight-land">   </iron-icon>
+    <paper-ripple></paper-ripple>
+    <span>Transportation</span></paper-item>
     <paper-menu class="menu-content">
-    <paper-item>By air</paper-item>
+    <paper-item><span>By air<span></paper-item>
     <a data-route="rail" href="{{baseUrl}}rail">
-    <paper-item>By rail</paper-item></a>
+    <paper-item><span>By rail</span></paper-item></a>
     <a data-route="bus" href="{{baseUrl}}bus">
-    <paper-item>By bus</paper-item></a>
+    <paper-item><span>By bus</span></paper-item></a>
     <a data-route="car" href="{{baseUrl}}car">
-    <paper-item>By car</paper-item></a>
+    <paper-item><span>By car</span></paper-item></a>
 </paper-menu>
+        
 </paper-submenu>
 
-<!-- Getting Around -->
+    <!-- Getting Around -->
 
 <paper-submenu>
-    <paper-item class="menu-trigger"> <iron-icon icon="maps:directions"></iron-icon>Getting Around</paper-item>
-    <paper-menu class="menu-content">
+    
+        <paper-item class="menu-trigger"><iron-icon icon="maps:directions"></iron-icon>
+    <paper-ripple></paper-ripple>
+    <span>Getting Around</span></paper-item>
+        <paper-menu class="menu-content">
     <paper-item>Seasons</paper-item>
     <paper-item>Where to stay</paper-item>
     <paper-item>Where to shop</paper-item>
     <paper-item>Where to eat</paper-item>
     <paper-item>What to see</paper-item>
     <paper-item>What to do</paper-item>
-    </paper-menu>
+        </paper-menu>
 </paper-submenu>
-      
+    
+    <!-- End of getting around -->
+        
+    <!-- Tours -->
+        
 <paper-submenu>
-    <paper-item class="menu-trigger"><iron-icon icon="visibility"></iron-icon>Tours</paper-item>
+    <paper-item class="menu-trigger"><iron-icon icon="visibility"></iron-icon>
+    <paper-ripple></paper-ripple>
+    <span>Tours</span></paper-item>
     <paper-menu class="menu-content">
     <paper-item>Regional tour</paper-item>   
-    <!--<paper-item>City tour (Sarajevo)</paper-item>-->
     <paper-item>Town tour</paper-item>
-        <!--Gorazde, Foca, Visegrad, Rogatica, Cajnice, Rudo, Ustikolina, Praca, Novo Gorazde, -->
-    
     <paper-item>Village tour</paper-item>
     <paper-item>Hamlet Tour</paper-item>
     <paper-item>Walking tours</paper-item>
     <paper-item>Biking tours</paper-item>
     <paper-item>Hiking</paper-item>
     <paper-item>Riding tours</paper-item>
-    <!--<paper-item>Alpine tours</paper-item>-->
-        
-        <!--<paper-item>Summer tours</paper-item>
-    <paper-item>Fall tours</paper-item>
-    <paper-item>Autumn tours</paper-item>-->
-        
-        
-    <!--<paper-item>Historical tours</paper-item>
-    <paper-item>Nature tours</paper-item>
-    </paper-menu>-->
 </paper-submenu>
+    
+    <!-- End of Tours -->
     
     <!-- Where to eat -->
     
-<!--<paper-submenu>
-    <paper-item class="menu-trigger"><iron-icon icon="maps:local-dining"></iron-icon>Where to eat</paper-item>
+<paper-submenu>
+    <paper-item class="menu-trigger"><iron-icon icon="maps:local-dining"></iron-icon>
+        <paper-ripple></paper-ripple>
+        <span>Where to eat</span></paper-item>
 <paper-menu class="menu-content">
     <paper-item>Breakfast</paper-item>
     <paper-item>Lunch</paper-item>
     <paper-item>Dine - Dinner</paper-item>
-</paper-submenu>-->
+</paper-submenu>
     
     <!-- Where to stay -->
     
-<!--<paper-submenu>
-    <paper-item class="menu-trigger"><iron-icon icon="maps:local-hotel"></iron-icon>Where to stay</paper-item>
+<paper-submenu>
+    <paper-item class="menu-trigger"><iron-icon icon="maps:local-hotel"></iron-icon>
+        <paper-ripple></paper-ripple>
+        <span>Where to stay</span></paper-item>
     <paper-menu class="menu-content">
     <paper-item>Hotels</paper-item>
     <paper-item>Motels</paper-item>
     <paper-item>Hostels</paper-item>
-</paper-submenu>-->
+</paper-submenu>
+    
+    <!-- End of where to stay -->
     
     <!-- Where to shop -->
     
-    <!--<paper-submenu>
-    <paper-item class="menu-trigger"><iron-icon icon="maps:local-grocery-store"></iron-icon>Where to shop</paper-item>
+<paper-submenu>
+    <paper-item class="menu-trigger"><iron-icon icon="maps:local-grocery-store"></iron-icon><paper-ripple></paper-ripple><span>Where to shop</span></paper-item>
     <paper-menu class="menu-content">
     <paper-item>Books</paper-item>
     <paper-item>Glasses</paper-item>
     <paper-item>Clothes</paper-item>
     <paper-item>Shoes</paper-item>
-</paper-submenu>-->
+</paper-submenu>
     
-      <!-- Sports and Recreations -->
+    <!-- End of where to shop -->
     
-<!--<paper-submenu>
-    <paper-item class="menu-trigger"><iron-icon icon="maps:directions-bike"></iron-icon>Sports and Recreations</paper-item>
+    <!-- Sports and Recreations -->
+    
+<paper-submenu>
+    <paper-item class="menu-trigger"><iron-icon icon="maps:directions-bike"></iron-icon>
+        <paper-ripple></paper-ripple>
+        <span>Sports and Recreations</span></paper-item>
     <paper-menu class="menu-content">
     <paper-item>Where to watch sport</paper-item>
     <paper-item>Recreation</paper-item>
-</paper-submenu>-->
+</paper-submenu>
     
-  <!--<paper-submenu disabled>
-    <paper-item class="menu-trigger">Unavailable</paper-item>
-    <paper-menu class="menu-content">
-      <paper-item>Disabled 1</paper-item>
-      <paper-item>Disabled 2</paper-item>
-    </paper-menu>
-  </paper-submenu>-->
-
-
-<!--<a data-route="users" href="{{baseUrl}}users">
-            <iron-icon icon="info"></iron-icon>
-            <span>General Info</span>
-</a>-->
-
+    <!-- End of Sports and Recreations -->
+    
 <a data-route="contact" href="{{baseUrl}}contact">
             <iron-icon icon="maps:map"></iron-icon>
-            <span>Maps</span>
+    <paper-ripple></paper-ripple>        
+    <span>Maps</span>
 </a>
+    
+<a data-route="contact" href="{{baseUrl}}contact">
+            <iron-icon src="https://maxcdn.icons8.com/Color/PNG/24/Maps/map_pin-24.png" ></iron-icon>
+    <paper-ripple></paper-ripple> 
+    <paper-ripple></paper-ripple>
+    <span>About Drinago</span>
+</a>
+    
 <!--<a data-route="contact" href="{{baseUrl}}contact">
             <iron-icon icon="mail"></iron-icon>
             <span>Transportation</span>-->
@@ -924,7 +932,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
      <!-- contact route -->
     
     <section data-route="contact">
-    <paper-material elevation="4" class="boja">
+    <paper-material elevation="1" class="boja">
         <h2 class="page-title">Maps</h2>
         <p align="justify">Map category is a big category. We should add one general map with points of <b>interests.</b></p>
         <p align="justify"> Our idea is to create subcategories with different meanings. For example, add category for walking only and then add walking paths via <b>Google My Map.</b> Then add driving paths, parking places, bus stops, and even add additional information about how far is the distance between place A and place B. Google My Map is very powerful, so we should make our best to make amazing and very thorough information.</p>

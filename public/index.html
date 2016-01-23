@@ -12,6 +12,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <html lang="">
 
 <head>
+ 
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css"/>
     <script type="text/javascript" src="//scribblemaps.com/api/js/"></script>
     <script type="text/javascript">
@@ -20,12 +21,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
     </script>
     
-    
-  <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300' rel='stylesheet' type='text/css'>
   <meta charset="utf-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="generator" content="Drinago" />
+  <meta name="generator" content="Polymer Starter Kit" />
   <title>Explore Drinago</title>
   <!-- Place favicon.ico in the `app/` directory -->
 
@@ -40,7 +40,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   <!-- Add to homescreen for Chrome on Android -->
   <meta name="mobile-web-app-capable" content="yes">
-  <meta name="application-name" content="Drinago">
+  <meta name="application-name" content="PSK">
   <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
 
   <!-- Add to homescreen for Safari on iOS -->
@@ -60,15 +60,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
   <!-- endbuild -->
 
-  <link rel="import" href="bower_components/paper-menu/paper-submenu.html">
+    <link rel="import" href="bower_components/paper-menu/paper-submenu.html">
   <!-- will be replaced with elements/elements.vulcanized.html -->
 
   <link rel="import" href="elements/elements.html">
   <!-- endreplace-->
   <!-- For shared styles, shared-styles.html import in elements.html -->
   <style is="custom-style" include="shared-styles"></style>
-  <link rel="import" href="bower_components/paper-card/paper-card.html">
-  <link rel="import" href="bower_components/paper-button/paper-button.html">
+<link rel="import" href="bower_components/paper-card/paper-card.html">
+<link rel="import" href="bower_components/paper-button/paper-button.html">
 
 </head>
 
@@ -77,16 +77,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <template is="dom-bind" id="app">
 
     <!-- FB CODE -->
-    <!--<div id="fb-root"></div>
+    <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
   js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
   fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>-->
-    <!-- FB CODE -->
+}(document, 'script', 'facebook-jssdk'));</script>
     
+   <!-- FB CODE -->
 <paper-drawer-panel id="paperDrawerPanel" responsive-width="900px">
      
     <!-- Drawer Scroll Header Panel -->
@@ -99,76 +99,88 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <span class="paper-font-title">Home</span>
 </paper-toolbar>
 
-    <!-- End of Drawer Content -->
+        <!-- Drawer Content -->
        
-    <!-- Paper Menu & submenu -->
+        <!-- Paper Menu & submenu -->
             
 <paper-menu class="list" attr-for-selected="data-route" selected="[[route]]">
-    <a data-route="home" href="{{baseUrl}}">
-        <iron-icon icon="bookmark"></iron-icon>
-            <span>Welcome</span>
-    </a>
+<a data-route="home" href="{{baseUrl}}">
+    <iron-icon src="https://maxcdn.icons8.com/Color/PNG/24/Very_Basic/home-24.png" ></iron-icon>
+    <paper-ripple></paper-ripple>
+    <span>Welcome</span>
+</a>
 <paper-menu>
                 
-    <!-- General Info -->
-                
-<paper-submenu>
-    <paper-item class="menu-trigger"><iron-icon icon="explore"></iron-icon>General Info</paper-item>
-    <paper-menu class="menu-content">
-    <a data-route="bi" href="{{baseUrl}}bi">
-        <paper-item>Basic Info</paper-item></a>
-    <a data-route="geology" href="{{baseUrl}}geology">
-        <paper-item>Geology</paper-item></a>
-    <a data-route="ar" href="{{baseUrl}}ar">
-        <paper-item>Archelogy</paper-item></a>
-    <a data-route="his" href="{{baseUrl}}his">
-        <paper-item>History</paper-item></a>
-    <a data-route="geography" href="{{baseUrl}}geography">
-        <paper-item>Geography</paper-item></a>
-</paper-submenu>
+<!-- General Info -->
+<link rel="import" href="../app/paper-ripple.html">
     
-    <!-- End of General Info -->
+<paper-submenu>
+    <paper-item class="menu-trigger"><iron-icon icon="explore"></iron-icon>  
+        <paper-ripple></paper-ripple>
+        <span>General Info</span></paper-item>
+<paper-menu class="menu-content">
+        
+
+    <a data-route="bi" href="{{baseUrl}}bi">
+        <paper-item><span>Basic Info</span></paper-item></a>
+    <a data-route="geology" href="{{baseUrl}}geology">
+        <paper-item><span>Geology</span></paper-item></a>
+    <a data-route="ar" href="{{baseUrl}}ar">
+        <paper-item><span>Archeology</span></paper-item></a>
+    <a data-route="his" href="{{baseUrl}}his">
+        <paper-item><span>History</span></paper-item></a>
+    <a data-route="geography" href="{{baseUrl}}geography">
+        <paper-item><span>Geography</span></paper-item></a>
+
+</paper-submenu>
            
     <!-- Transportation -->
                 
 <paper-submenu>
-    <paper-item class="menu-trigger"><iron-icon icon="icons:flight-land"></iron-icon>Transportation</paper-item>
-    <paper-menu class="menu-content">
-    <paper-item>By air</paper-item>
-    <a data-route="rail" href="{{baseUrl}}rail">
-    <paper-item>By rail</paper-item></a>
-    <a data-route="bus" href="{{baseUrl}}bus">
-    <paper-item>By bus</paper-item></a>
-    <a data-route="car" href="{{baseUrl}}car">
-    <paper-item>By car</paper-item></a>
-</paper-menu>
-</paper-submenu>
     
-    <!-- End of Transportation -->
+    <paper-item class="menu-trigger"><iron-icon icon="icons:flight-land">   </iron-icon>
+    <paper-ripple></paper-ripple>
+    <span>Transportation</span></paper-item>
+    <paper-menu class="menu-content">
+    <paper-item><span>By air<span></paper-item>
+    <a data-route="rail" href="{{baseUrl}}rail">
+    <paper-item><span>By rail</span></paper-item></a>
+    <a data-route="bus" href="{{baseUrl}}bus">
+    <paper-item><span>By bus</span></paper-item></a>
+    <a data-route="car" href="{{baseUrl}}car">
+    <paper-item><span>By car</span></paper-item></a>
+</paper-menu>
+        
+</paper-submenu>
 
     <!-- Getting Around -->
 
 <paper-submenu>
-    <paper-item class="menu-trigger"> <iron-icon icon="maps:directions"></iron-icon>Getting Around</paper-item>
-    <paper-menu class="menu-content">
+    
+        <paper-item class="menu-trigger"><iron-icon icon="maps:directions"></iron-icon>
+    <paper-ripple></paper-ripple>
+    <span>Getting Around</span></paper-item>
+        <paper-menu class="menu-content">
     <paper-item>Seasons</paper-item>
     <paper-item>Where to stay</paper-item>
     <paper-item>Where to shop</paper-item>
     <paper-item>Where to eat</paper-item>
     <paper-item>What to see</paper-item>
     <paper-item>What to do</paper-item>
-    </paper-menu>
+        </paper-menu>
 </paper-submenu>
-      
-    <!-- End of Getting Around -->
     
+    <!-- End of getting around -->
+        
     <!-- Tours -->
-    
+        
 <paper-submenu>
-    <paper-item class="menu-trigger"><iron-icon icon="visibility"></iron-icon>Tours</paper-item>
+    <paper-item class="menu-trigger"><iron-icon icon="visibility"></iron-icon>
+    <paper-ripple></paper-ripple>
+    <span>Tours</span></paper-item>
     <paper-menu class="menu-content">
     <paper-item>Regional tour</paper-item>   
-    <paper-item>Town tour</paper-item>    
+    <paper-item>Town tour</paper-item>
     <paper-item>Village tour</paper-item>
     <paper-item>Hamlet Tour</paper-item>
     <paper-item>Walking tours</paper-item>
@@ -179,15 +191,110 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     
     <!-- End of Tours -->
     
-    <!-- Maps -->
+    <!-- Where to eat -->
+    
+<paper-submenu>
+    <paper-item class="menu-trigger"><iron-icon icon="maps:local-dining"></iron-icon>
+        <paper-ripple></paper-ripple>
+        <span>Where to eat</span></paper-item>
+<paper-menu class="menu-content">
+    <paper-item>Breakfast</paper-item>
+    <paper-item>Lunch</paper-item>
+    <paper-item>Dine - Dinner</paper-item>
+</paper-submenu>
+    
+    <!-- Where to stay -->
+    
+<paper-submenu>
+    <paper-item class="menu-trigger"><iron-icon icon="maps:local-hotel"></iron-icon>
+        <paper-ripple></paper-ripple>
+        <span>Where to stay</span></paper-item>
+    <paper-menu class="menu-content">
+    <paper-item>Hotels</paper-item>
+    <paper-item>Motels</paper-item>
+    <paper-item>Hostels</paper-item>
+</paper-submenu>
+    
+    <!-- End of where to stay -->
+    
+    <!-- Where to shop -->
+    
+<paper-submenu>
+    <paper-item class="menu-trigger"><iron-icon icon="maps:local-grocery-store"></iron-icon><paper-ripple></paper-ripple><span>Where to shop</span></paper-item>
+    <paper-menu class="menu-content">
+    <paper-item>Books</paper-item>
+    <paper-item>Glasses</paper-item>
+    <paper-item>Clothes</paper-item>
+    <paper-item>Shoes</paper-item>
+</paper-submenu>
+    
+    <!-- End of where to shop -->
+    
+    <!-- Sports and Recreations -->
+    
+<paper-submenu>
+    <paper-item class="menu-trigger"><iron-icon icon="maps:directions-bike"></iron-icon>
+        <paper-ripple></paper-ripple>
+        <span>Sports and Recreations</span></paper-item>
+    <paper-menu class="menu-content">
+    <paper-item>Where to watch sport</paper-item>
+    <paper-item>Recreation</paper-item>
+</paper-submenu>
+    
+    <!-- End of Sports and Recreations -->
     
 <a data-route="contact" href="{{baseUrl}}contact">
             <iron-icon icon="maps:map"></iron-icon>
-            <span>Maps</span>
+    <paper-ripple></paper-ripple>        
+    <span>Maps</span>
 </a>
     
-    <!-- End of Maps -->
+<a data-route="contact" href="{{baseUrl}}contact">
+            <iron-icon src="https://maxcdn.icons8.com/Color/PNG/24/Maps/map_pin-24.png" ></iron-icon>
+    <paper-ripple></paper-ripple> 
+    <paper-ripple></paper-ripple>
+    <span>About Drinago</span>
+</a>
     
+<!--<a data-route="contact" href="{{baseUrl}}contact">
+            <iron-icon icon="mail"></iron-icon>
+            <span>Transportation</span>-->
+</a>
+<!--<a data-route="contact" href="{{baseUrl}}contact">
+            <iron-icon icon="mail"></iron-icon>
+            <span>Where to stay</span>
+</a>-->
+<!--<a data-route="contact" href="{{baseUrl}}contact">
+            <iron-icon icon="mail"></iron-icon>
+            <span>Where to eat</span>
+</a>-->
+<!--<a data-route="contact" href="{{baseUrl}}contact">
+            <iron-icon icon="mail"></iron-icon>
+            <span>What to see</span>
+</a>-->
+<!--<a data-route="contact" href="{{baseUrl}}contact">
+            <iron-icon icon="mail"></iron-icon>
+            <span>Where to shop</span>-->
+</a>
+<!--<a data-route="contact" href="{{baseUrl}}contact">
+            <iron-icon icon="maps:terrain"></iron-icon>
+            <span>Around Gorazde</span>
+</a>-->
+<!--<a data-route="contact" href="{{baseUrl}}contact">
+            <iron-icon icon="maps:directions"></iron-icon>
+            <span>Getting around</span>
+</a>-->
+<!--<a data-route="contact" href="{{baseUrl}}contact">
+            <iron-icon icon="mail"></iron-icon>
+            <span>Sports and Recreations</span>
+</a>-->
+<!--            <iron-icon icon="maps:pin-drop"></iron-icon>
+            <span>Events</span>
+</a>-->
+<!--<a data-route="contact" href="{{baseUrl}}contact">
+            <iron-icon icon="maps:local-activity"></iron-icon>
+            <span>Health and Wellness</span>
+</a>-->
 </paper-menu>
 </paper-scroll-header-panel>
 
@@ -212,7 +319,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <div class="app-name">Explore Drinago</div>
 </div>
 
-      <!-- Application sub title -->
+       <!-- Application sub title -->
     
 <div class="bottom bottom-container center horizontal layout">
 <div class="bottom-title paper-font-subhead">Visit Gorazde</div>
@@ -220,7 +327,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 </paper-toolbar>
 
-    <!-- Main Content -->
+        <!-- Main Content -->
     
 <div class="content">
 <iron-pages attr-for-selected="data-route" selected="{{route}}">
@@ -229,34 +336,35 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <paper-material elevation="5">
 
-    <h1 class=paper-font-body3>Editor's notice</h1>
+<h1 class=paper-font-body3>Editor's notice</h1>
     
-    <p align="justify" class=paper-font-body1>This is an early alpha stage of the website. We have chosen to build our website on the foundations of Google's Polymer Web Components. Please, any errors, bugs or any hiccups you may encounter, please let me know at: anelx.colo@gmail.com, thanks!</p>
+<p align="justify" class=paper-font-body1>This is an early alpha stage of the website. We have chosen to build our website on the foundations of Google's Polymer Web Components. Please, any errors, bugs or any hiccups you may encounter, please let me know at: anelx.colo@gmail.com, thanks!</p>
     
-    <img src="http://i.imgur.com/U6IGCoR.jpg" height="auto" width="auto" align="center">
+<img src="http://i.imgur.com/U6IGCoR.jpg" height="auto" width="auto" align="center">
 
-    <p align="justify" class=paper-font-body1>This is a <b>Google Polymer app</b>, which means that it can be used as a standalone app, and not just like a regular website. All you have to do, to have a working app on your phone is to press Add to Home Screen in Google Chrome or any other mobile browser. That action will add an Icon to your smartphone home screen, and then you can use the app without ever opening the website in the browser. It is responsive too, so you can use it on any device you have (desktop, laptop, tablet, smartphone)</p>
-    <p align="justify" class=paper-font-body1>This website/app is solely dedicated to the tourists who are visiting or who are wishing to visit Bosnia, and in this case the small town of Gorazde. The point of the website is to introduce tourists to the town of Gorazde, people of Gorazde, culture of Gorazde, and so forth.</p>
+<p align="justify" class=paper-font-body1>This is a <b>Google Polymer app</b>, which means that it can be used as a standalone app, and not just like a regular website. All you have to do, to have a working app on your phone is to press Add to Home Screen in Google Chrome or any other mobile browser. That action will add an Icon to your smartphone home screen, and then you can use the app without ever opening the website in the browser. It is responsive too, so you can use it on any device you have (desktop, laptop, tablet, smartphone)</p>
+    
+<p align="justify" class=paper-font-body1>This website/app is solely dedicated to the tourists who are visiting or who are wishing to visit Bosnia, and in this case the small town of Gorazde. The point of the website is to introduce tourists to the town of Gorazde, people of Gorazde, culture of Gorazde, and so forth.</p>
 </paper-material>
 
 <paper-material elevation="2">
     
-    <h1 class=paper-font-body3>Our vision</h1>
-        
-    <p align="justify" class=paper-font-body1>This website was created with focus on introducing the potential which whom this region is rich. Drinago is a team who is always watching top trends in the world, which is really important. It promotes seasonal and out of season information into the world. Mainly informs curious possible visitors to Gorazde about nature potential, clean air, suitable climate, preservation of environment, forests and mountains scope, flora and fauna richness.</p>
+<h1 class=paper-font-body3>Our vision</h1>
+    
+<p align="justify" class=paper-font-body1>This website was created with focus on introducing the potential which whom this region is rich. Drinago is a team who is always watching top trends in the world, which is really important. It promotes seasonal and out of season information into the world. Mainly informs curious possible visitors to Gorazde about nature potential, clean air, suitable climate, preservation of environment, forests and mountains scope, flora and fauna richness.</p>
 <p align="justify" class="paper-font-body1">In the first plan, purpose of this website is to introduce nature and cultural heritage of this region of Bosnia and Herzegovina</p>
-    <img src="http://i.imgur.com/CoreXHb.jpg" width="auto" height="auto">
-</paper-material>
+    
+      <img src="http://i.imgur.com/CoreXHb.jpg" width="auto" height="auto">
+    </paper-material>
   
+
+
 <paper-material elevation="3" class="paper-font-body3">
-    
     <h1 class=paper-font-body3>Team behind the project</h1>
-    
     <p align="justify" class=paper-font-body1>We should add a little information about ourselves, who are we, what we do, and what is our role on the website.</p>
 </paper-material>
 
 <paper-material elevation="3" class="paper-font-body3">
-    
     <h1 class=paper-font-body3>Changelog</h1>
     
     <p align="justify" class=paper-font-body1>This is the Drinago changelog so far.</p>
@@ -284,11 +392,30 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <paper-item class="menu-trigger"><iron-icon icon="maps:directions"></iron-icon>Getting Around</paper-item>
     <paper-menu class="menu-content">
     <paper-item>test</paper-item>
+   
     </paper-menu>
 </paper-submenu>
     
+    <!--<div dir="rtl">
+      <paper-tabs selected="0" scrollable>
+
+        <paper-tab>NUMBER ONE ITEM</paper-tab>
+        <paper-tab>ITEM TWO</paper-tab>
+        <paper-tab>THE THIRD ITEM</paper-tab>
+        <paper-tab>THE ITEM FOUR</paper-tab>
+        <paper-tab>FIFTH</paper-tab>
+        <paper-tab>THE SIXTH TAB</paper-tab>
+        <paper-tab>NUMBER SEVEN</paper-tab>
+        <paper-tab>EIGHT</paper-tab>
+        <paper-tab>NUMBER NINE</paper-tab>
+        <paper-tab>THE TENTH</paper-tab>
+        <paper-tab>THE ITEM ELEVEN</paper-tab>
+        <paper-tab>TWELFTH ITEM</paper-tab>
+
+      </paper-tabs>
+    </div>-->
     <p class="paper-font-body1">This area here is intended for Archeology informations</p>
-</paper-material>
+    </paper-material>
        
 <paper-material elevation="2">
         
@@ -317,17 +444,20 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <hr>
     
     <paper-material elevation="2"><h1 align="center">Spring</h1>
+    
+    
     </paper-material>
 
     <iron-pages selected="{{selected}}">
         
       <div align="justify">Slika<img src="http://www.freewebheaders.com/wordpress/wp-content/gallery/beautiful-landscape/unique-lake-snow-mountain-clouds-nature-landscape-web-header.jpg"></img>Ovo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je test</div>
+        
     
       <div align="justify">   <img src="http://www.freewebheaders.com/wordpress/wp-content/gallery/beautiful-landscape/unique-lake-snow-mountain-clouds-nature-landscape-web-header.jpg"></img>Ovo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je test</div>
-    
       <div align="justify">   <img src="http://www.freewebheaders.com/wordpress/wp-content/gallery/beautiful-landscape/unique-lake-snow-mountain-clouds-nature-landscape-web-header.jpg"></img>Ovo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je testOvo je test, ovo je test ovo je test ovo je test ovo je test</div>
     </iron-pages>
    
+    
      <!-- Kraj sekcije ar -->
     
 </section>
@@ -336,99 +466,117 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     
     <section data-route="bi">
     
+        
     <h1>Welcome to Gorazde</h1>
         <hr>
-<paper-material elevation="2"> 
-    <p align="left"><b>Basic Info</b></p> 
-    <hr>
-    <p align="justify" class="paper-font-body1">Welcome to industrial, cultural, administrative, university and sport's center of Upper Drina's region and Bosnian - podrinje canton. Enjoy your stay!</p>
-    <img src="http://img07.deviantart.net/cff2/i/2008/172/b/a/gorazde_from_a_far_by_minq.jpg"width="auto" height="150">
-</paper-material>
-<paper-material elevation="2">
-    <p align="left"><b>Population</b></p>
-    <hr>
-    <p align="justify" class="paper-font-body1">Amount of population of Gorazde trough the history before the First Ottoman Census, there is no data about possible population of Gorazde. The first population data is from Ottoman period.
-    <p class="paper-font-body1">First Ottoman Census from <b>1468/1469</b> Gorazde has had <b>144 houses</b> and <b>835</b> citiziens.</p>
-    <p class="paper-font-body1">During <b>1879</b> there was organized first census of population in Bosnia and Herzegovina, from Austo - Hungarian government in Bosnia and Herzegovina. In that time Gorazde has had <b>846</b> citizens.</p>
-    <p class="paper-font-body1">During the census from <b>1885</b> of population in Gorazde, there was <b>1.226</b> citizens.</p>
-    <p class="paper-font-body1">During the census from <b>1910</b> of population in Gorazde, there was <b>1.460</b> citizens.</p>    
-    <p class="paper-font-body1">During the census from <b>1921</b> of population in Gorazde, there was <b>1.226</b> citizens.</p>
-    <p class="paper-font-body1">During the census from <b>1931</b> of population in Gorazde, there was <b>1.226</b> citizens.</p>
-    <p class="paper-font-body1">During the census from <b>1948</b> of population in Gorazde, there was <b>2.487</b> citizens.</p>
-    <p class="paper-font-body1">During the census from <b>1953</b> of population in Gorazde, there was <b>4.485</b> citizens.</p> 
-    <p class="paper-font-body1">During the census from <b>1961</b> of population in Gorazde, there was <b>8.812</b> citizens.</p>     
-    <p class="paper-font-body1">During the census from <b>1971</b> of population in Gorazde, there was <b>9.482</b> citizens.</p>
-    </p>
-    <p class="paper-font-body1">During the census from <b>1981</b> of population in Gorazde, there was <b>13.022</b> citizens.</p>
-    <p class="paper-font-body1">During the census from <b>1991</b> of population in Gorazde, there was <b>19.573</b> citizens.</p>
-    <p class="paper-font-body1">During the census from <b>2013</b> of population in Gorazde, there was <b>12.512</b> citizens.</p>
-    <img src="http://placehold.it/500x100">  
-</paper-material>
+      <paper-material elevation="2"> 
+        <p align="left"><b>Basic Info</b></p> 
+          <hr>
+          <p align="justify" class="paper-font-body1">Welcome to industrial, cultural, administrative, university and sport's center of Upper Drina's region and Bosnian - podrinje canton. Enjoy your stay!</p>
+           <img src="http://img07.deviantart.net/cff2/i/2008/172/b/a/gorazde_from_a_far_by_minq.jpg"width="auto" height="150">
+          </paper-material>
         
-<paper-material elevation="2">
-    <p align="left"><b>Ethnicity and Religion</b></p>
-    <hr>
-    <p class="paper-font-body1">Ethnicity and religion in Gorazde trough the years</p>
-    <p class="paper-font-body1">Gorazde was multiethnical and multireigious from it's mentioning in historical documents.</p>    
-    <img src="http://placehold.it/500x100">
-</paper-material>
         
-<paper-material elevation="2">
-    <p align="left"><b>Surface Area of Gorazde</b></p>
-    <hr>
-    <p class="paper-font-body1">Surface Area of Gorazde. This area will hold a map.</p>
-    <img src="http://placehold.it/500x100">
-</paper-material>
+        <paper-material elevation="2">
+        <p align="left"><b>Population</b></p>
+            <hr>
+        <p align="justify" class="paper-font-body1">Amount of population of Gorazde trough the history before the First Ottoman Census, there is no data about possible population of Gorazde. The first population data is from Ottoman period.
+                
+<p class="paper-font-body1">First Ottoman Census from <b>1468/1469</b> Gorazde has had <b>144 houses</b> and <b>835</b> citiziens.</p>
+            
+               <p class="paper-font-body1">During <b>1879</b> there was organized first census of population in Bosnia and Herzegovina, from Austo - Hungarian government in Bosnia and Herzegovina. In that time Gorazde has had <b>846</b> citizens.</p>
+                
+                <p class="paper-font-body1">During the census from <b>1885</b> of population in Gorazde, there was <b>1.226</b> citizens.</p>
+            
+            <p class="paper-font-body1">During the census from <b>1910</b> of population in Gorazde, there was <b>1.460</b> citizens.</p>
+            
+            <p class="paper-font-body1">During the census from <b>1921</b> of population in Gorazde, there was <b>1.226</b> citizens.</p>
+           
+            <p class="paper-font-body1">During the census from <b>1931</b> of population in Gorazde, there was <b>1.226</b> citizens.</p>
+            
+            <p class="paper-font-body1">During the census from <b>1948</b> of population in Gorazde, there was <b>2.487</b> citizens.</p>
+            
+            <p class="paper-font-body1">During the census from <b>1953</b> of population in Gorazde, there was <b>4.485</b> citizens.</p>
+            
+            <p class="paper-font-body1">During the census from <b>1961</b> of population in Gorazde, there was <b>8.812</b> citizens.</p>
+               
+            <p class="paper-font-body1">During the census from <b>1971</b> of population in Gorazde, there was <b>9.482</b> citizens.</p>
+            </p>
         
-<paper-material elevation="2">
-    <p align="left"><b>Topograhical position</b></p>
-    <hr>
-    <p class="paper-font-body1">Topographical position of Gorazde. This area will hold a map.</p>
-    <img src="http://placehold.it/500x100">
-</paper-material>
+            <p class="paper-font-body1">During the census from <b>1981</b> of population in Gorazde, there was <b>13.022</b> citizens.</p>
+             
+            <p class="paper-font-body1">During the census from <b>1991</b> of population in Gorazde, there was <b>19.573</b> citizens.</p>
         
-<paper-material elevation="2">
-    <p align="left"><b>Time zone</b></p>
-    <hr>
-    <p class="paper-font-body1">Self explanatory. Time zone in Gorazde.</p>
-    <img src="http://placehold.it/500x100">
-    </paper-material>
+            <p class="paper-font-body1">During the census from <b>2013</b> of population in Gorazde, there was <b>12.512</b> citizens.</p>
+        <img src="http://placehold.it/500x100">  
         
-<paper-material elevation="2">
-    <p align="left"><b>Climate</b></p>
-    <hr>
-    <p class="paper-font-body1">Type of climate in Gorazde.</p>
-    <img src="http://placehold.it/500x100">
-</paper-material>
+        </paper-material>
         
-<paper-material elevation="2">
-    <p align="left"><b>Electricity</b></p>
-    <hr>
-    <p class="paper-font-body1">Type of Electricity.</p>
-    <img src="http://placehold.it/500x100">
-</paper-material>
+        <paper-material elevation="2">
+        <p align="left"><b>Ethnicity and Religion</b></p>
+            <hr>
+             <p class="paper-font-body1">Ethnicity and religion in Gorazde trough the years</p>
+            <p class="paper-font-body1">Gorazde was multiethnical and multireigious from it's mentioning in historical documents.</p>
+            
+             <img src="http://placehold.it/500x100">
+            </paper-material>
         
-<paper-material elevation="2">
-    <p align="left"><b>Water Supply</b></p>
-    <hr>
-    <p class="paper-font-body1">Is it safe to drink tap water or not.</p>
-    <img src="http://placehold.it/500x100">
-</paper-material>
+        <paper-material elevation="2">
+        <p align="left"><b>Surface Area of Gorazde</b></p>
+            <hr>
+             <p class="paper-font-body1">Surface Area of Gorazde. This area will hold a map.</p>
+             <img src="http://placehold.it/500x100">
+            </paper-material>
         
-<paper-material elevation="2">
-    <p align="left"><b>Currency</b></p>
-    <hr>
-    <p class="paper-font-body1">Which currency can you use, can you use other types of currencies to pay for example with euros etc.</p>
-    <img src="http://placehold.it/500x100">
-</paper-material>  
+        <paper-material elevation="2">
+        <p align="left"><b>Topograhical position</b></p>
+            <hr>
+             <p class="paper-font-body1">Topographical position of Gorazde. This area will hold a map.</p>
+             <img src="http://placehold.it/500x100">
+            </paper-material>
         
-<paper-material elevation="2">
-    <p align="left"><b>Holidays</b></p>
-    <hr>
-    <p class="paper-font-body1">Table of dates would be simple to include in this area.</p>
-    <img src="http://placehold.it/500x100">
-</paper-material>
-<hr>
+        <paper-material elevation="2">
+        <p align="left"><b>Time zone</b></p>
+            <hr>
+             <p class="paper-font-body1">Self explanatory. Time zone in Gorazde.</p>
+             <img src="http://placehold.it/500x100">
+            </paper-material>
+        
+        <paper-material elevation="2">
+            <p align="left"><b>Climate</b></p>
+            <hr>
+             <p class="paper-font-body1">Type of climate in Gorazde.</p>
+             <img src="http://placehold.it/500x100">
+            </paper-material>
+        
+        <paper-material elevation="2">
+            <p align="left"><b>Electricity</b></p>
+            <hr>
+             <p class="paper-font-body1">Type of Electricity.</p>
+             <img src="http://placehold.it/500x100">
+            </paper-material>
+        
+        <paper-material elevation="2">
+        <p align="left"><b>Water Supply</b></p>
+            <hr>
+             <p class="paper-font-body1">Is it safe to drink tap water or not.</p>
+             <img src="http://placehold.it/500x100">
+        </paper-material>
+        
+        <paper-material elevation="2">
+        <p align="left"><b>Currency</b></p>
+            <hr>
+             <p class="paper-font-body1">Which currency can you use, can you use other types of currencies to pay for example with euros etc.</p>
+             <img src="http://placehold.it/500x100">
+        </paper-material>  
+        
+        <paper-material elevation="2">
+        <p align="left"><b>Holidays</b></p>
+            <hr>
+             <p class="paper-font-body1">Table of dates would be simple to include in this area.</p>
+             <img src="http://placehold.it/500x100">
+        </paper-material>
+        <hr>
     
     </section>
     
@@ -436,181 +584,191 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     
     <!-- Geology route-->
     
-<section data-route="geology">
-<paper-material elevation="3">
+    <section data-route="geology">
+           <paper-material elevation="3">
     <h1>Information about Geology</h1>
+        
     <p>This area is intended for brief geology of Gorazde and region around Gorazde. Keep this simple as short.</p>
-</paper-material>
+    </paper-material>
     
-<paper-material elevation="3">
-    <img src="http://placehold.it/500x100">
-</paper-material>
+    <paper-material elevation="3">
+        <img src="http://placehold.it/500x100">
+    </paper-material>
         
-<paper-material elevation="3">
-    <h1>Geology 2</h1>
-    <p>This area here is intended for additional infomations.</p>    
-</paper-material>
+    <paper-material elevation="3">
+        <h1>Geology 2</h1>
+        <p>This area here is intended for additional infomations.</p>    
+    </paper-material>
         
-<paper-material elevation="3">
-    <img src="http://placehold.it/500x100">
-</paper-material>
+    <paper-material elevation="3">
+        <img src="http://placehold.it/500x100">
+    </paper-material>
         
-<paper-material elevation="3">
-    <h1>Geology 3</h1>
-    <p>This area here is intended for additional infomations.</p>    
-</paper-material>
+    <paper-material elevation="3">
+        <h1>Geology 3</h1>
+        <p>This area here is intended for additional infomations.</p>    
+    </paper-material>
         
-<paper-material elevation="3">
-    <img src="http://placehold.it/500x100">
-</paper-material>
+    <paper-material elevation="3">
+        <img src="http://placehold.it/500x100">
+    </paper-material>
         
-<paper-material elevation="3">
-    <h1>Geology 4</h1>
-    <p>This area here is intended for additional infomations.</p>    
-</paper-material>
+    <paper-material elevation="3">
+        <h1>Geology 4</h1>
+        <p>This area here is intended for additional infomations.</p>    
+    </paper-material>
          
-<paper-material elevation="3">
-    <img src="http://placehold.it/500x100">
-</paper-material>
+    <paper-material elevation="3">
+        <img src="http://placehold.it/500x100">
+    </paper-material>
         
-<paper-material elevation="3">
-    <h1>Geology 5</h1>
-    <p>This area here is intended for additional infomations.</p>    
-</paper-material>
+    <paper-material elevation="3">
+        <h1>Geology 5</h1>
+        <p>This area here is intended for additional infomations.</p>    
+    </paper-material>
         
-<paper-material elevation="3">
-    <img src="http://placehold.it/500x100">
-</paper-material>
+    <paper-material elevation="3">
+        <img src="http://placehold.it/500x100">
+    </paper-material>
         
-    <!-- Kraj sekcije geology -->
+        <!-- Kraj sekcije geology -->
         
-</section>
+    </section>
  
     <!-- History route -->
     
-<section data-route="his">
+    <section data-route="his">
     
-<paper-material elevation="3">
+    <paper-material elevation="3">
     <h1>Brief History</h1>
+        
     <p>This area is intended for brief history of Gorazde and region around Gorazde. Keep this simple as short.</p>
-</paper-material>
+    </paper-material>
     
-<paper-material elevation="3">
-    <img src="http://placehold.it/500x100">
-</paper-material>
+    <paper-material elevation="3">
+        <img src="http://placehold.it/500x100">
+    </paper-material>
         
-<paper-material elevation="3">
-    <h1>Brief History 2</h1>
-    <p>This area here is intended for additional infomations.</p>    
-</paper-material>
+    <paper-material elevation="3">
+        <h1>Brief History 2</h1>
+        <p>This area here is intended for additional infomations.</p>    
+    </paper-material>
         
-<paper-material elevation="3">
-    <img src="http://placehold.it/500x100">
-</paper-material>
+    <paper-material elevation="3">
+        <img src="http://placehold.it/500x100">
+    </paper-material>
         
-<paper-material elevation="3">
-    <h1>Brief History 3</h1>
-    <p>This area here is intended for additional infomations.</p>    
-</paper-material>
+    <paper-material elevation="3">
+        <h1>Brief History 3</h1>
+        <p>This area here is intended for additional infomations.</p>    
+    </paper-material>
         
-<paper-material elevation="3">
-    <img src="http://placehold.it/500x100">
-</paper-material>
+    <paper-material elevation="3">
+        <img src="http://placehold.it/500x100">
+    </paper-material>
         
-<paper-material elevation="3">
-    <h1>Brief History 4</h1>
-    <p>This area here is intended for additional infomations.</p>    
-</paper-material>
+    <paper-material elevation="3">
+        <h1>Brief History 4</h1>
+        <p>This area here is intended for additional infomations.</p>    
+    </paper-material>
         
-<paper-material elevation="3">
-    <img src="http://placehold.it/500x100">
-</paper-material>
+    <paper-material elevation="3">
+        <img src="http://placehold.it/500x100">
+    </paper-material>
         
-<paper-material elevation="3">
-    <h1>Brief History 5</h1>
-    <p>This area here is intended for additional infomations.</p>    
-</paper-material>
+    <paper-material elevation="3">
+        <h1>Brief History 5</h1>
+        <p>This area here is intended for additional infomations.</p>    
+    </paper-material>
         
-<paper-material elevation="3">
-    <img src="http://placehold.it/500x100">
-</paper-material>
+    <paper-material elevation="3">
+        <img src="http://placehold.it/500x100">
+    </paper-material>
     
-    <!-- Kraj sekcije History -->
+        <!-- Kraj sekcije History -->
         
-</section>
+    </section>
     
     <!-- Geography route -->
 
-<section data-route="geography">
+    <section data-route="geography">
     
-<paper-material elevation="3">
-    <h1>Brief Information about Geography</h1>    
+    
+        <paper-material elevation="3">
+    <h1>Brief Information about Geography</h1>
+        
     <p>This area is intended for brief geography of Gorazde and region around Gorazde. Keep this simple as short.</p>
-</paper-material>
+    </paper-material>
     
-<paper-material elevation="3">
-    <img src="http://placehold.it/500x100">
-</paper-material>
+    <paper-material elevation="3">
+        <img src="http://placehold.it/500x100">
+    </paper-material>
         
-<paper-material elevation="3">
-    <h1>Geography 2</h1>
-    <p>This area here is intended for additional infomations.</p>    
-</paper-material>
+    <paper-material elevation="3">
+        <h1>Geography 2</h1>
+        <p>This area here is intended for additional infomations.</p>    
+    </paper-material>
         
-<paper-material elevation="3">
-    <img src="http://placehold.it/500x100">
-</paper-material>
+    <paper-material elevation="3">
+        <img src="http://placehold.it/500x100">
+    </paper-material>
         
-<paper-material elevation="3">
-    <h1>Geography 3</h1>
-    <p>This area here is intended for additional infomations.</p>    
-</paper-material>
+    <paper-material elevation="3">
+        <h1>Geography 3</h1>
+        <p>This area here is intended for additional infomations.</p>    
+    </paper-material>
         
-<paper-material elevation="3">
-    <img src="http://placehold.it/500x100">
-</paper-material>
+    <paper-material elevation="3">
+        <img src="http://placehold.it/500x100">
+    </paper-material>
         
-<paper-material elevation="3">
-    <h1>Geography 4</h1>
-    <p>This area here is intended for additional infomations.</p>    
-</paper-material>
+    <paper-material elevation="3">
+        <h1>Geography 4</h1>
+        <p>This area here is intended for additional infomations.</p>    
+    </paper-material>
         
-<paper-material elevation="3">
-    <img src="http://placehold.it/500x100">
-</paper-material>
+    <paper-material elevation="3">
+        <img src="http://placehold.it/500x100">
+    </paper-material>
         
-<paper-material elevation="3">
-    <h1>Geography 5</h1>
-    <p>This area here is intended for additional infomations.</p>    
-</paper-material>
+    <paper-material elevation="3">
+        <h1>Geography 5</h1>
+        <p>This area here is intended for additional infomations.</p>    
+    </paper-material>
         
-<paper-material elevation="3">
-    <img src="http://placehold.it/500x100">
-</paper-material>
+    <paper-material elevation="3">
+        <img src="http://placehold.it/500x100">
+    </paper-material>
     
-</section>
+    </section>
     
     <!-- Kraj geography route -->
     
+    
     <!-- Transportation infos. --> 
+    
     
     <!-- Bus route-->
     
-<section data-route="bus">
+    <section data-route="bus">
  
-<paper-material elevation="2">
-    <h1 align="center">Locations of Bus stops</h1>
-    <p class="paper-font-body1">This area here is intended for an interactive map.</p>    
-    <img src="http://www.transitchicago.com/assets/1/page_header_images/680header_bustext.jpg" height="auto" width="auto" align="center"
+    <paper-material elevation="2">
+        <h1 align="center">Locations of Bus stops</h1>
+<p class="paper-font-body1">This area here is intended for an interactive map.</p>
+        
+<img src="http://www.transitchicago.com/assets/1/page_header_images/680header_bustext.jpg" height="auto" width="auto" align="center"
 </img>
-</paper-material>  
+        
+    </paper-material>  
    
-<paper-material elevation="4">
+    <paper-material elevation="4">
     
     <img src="http://www.hennessybus.ie/images/bus-coach-header1.gif" height="auto" width="auto" align="center"</img>
     <h1 style="color: gray;" class=paper-font-body4 align="center">Transportation via Bus</h1> 
     <h1 style="color: lightgray;" class=paper-font-body4 align="center">Bus timetable and Locations of Bus stops.</h1>
+
     <p align="justify" class=paper-font-body1>This area here is intended for bus timetable and map of the Bus stops locations. We should ask travel companies for exact travel timetable. I've added a simple example of a timetable, it is flexible so we can add any information that we want.</p>
+
     <p align="center">Timetable example</p>
         
     <table class="mui-table" align="center">
@@ -659,126 +817,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <paper-material elevation="4">
     
     <!--<img src="http://www.hennessybus.ie/images/bus-coach-header1.gif" height="auto" width="auto" align="center"</img>-->
-    <h1 style="color: gray;" class=paper-font-body4 align="center">Transportation via Rail</h1> 
+<h1 style="color: gray;" class=paper-font-body4 align="center">Transportation via Rail</h1> 
 <!--<h1 style="color: lightgray;" class=paper-font-body4 align="center">Rail timetable</h1>-->
-    <p align="justify" class=paper-font-body1>This area here is intended for including nearby Train stations and map of their locations.       </p>
-    
-</paper-material>
-    
-    <!-- Kraj sekcije rail -->
 
-</section>
-      
-     <!-- car route -->
+<p align="justify" class=paper-font-body1>This area here is intended for including nearby Train stations and map of their locations.</p>
     
-<section data-route="car">
-    
-<paper-material elevation="2">
-     <h1 align="center">Transportation via Car</h1>
-     <p class="paper-font-body1">This area here is intended for an interactive map.</p>
-     <img src="http://www.cityauctiongroup.com/media/car_header.jpg" height="auto" width="auto" align="center"</img>
-</paper-material>  
-   
-<paper-material elevation="4">
-    <h1 style="color: gray;" class=paper-font-body4 align="center">Transportation via Cars</h1> 
-    <p align="justify" class=paper-font-body1>Waiting for Ervins text. I am so exausted right now sigh...</p>
-</paper-material>
-    
-    <!-- Kraj sekcije cars -->
-    
-</section>
-    
-    <!--<section data-route="users">-->
-
-    <!--</section>-->
-    
-    <!-- user-info route -->
-
-<section data-route="user-info">
-    
-<paper-material elevation="1">
-    <h2 class="page-title">User: {{params.name}}</h2>
-    <div>This is {{params.name}}'s section</div>
-</paper-material>
- 
-</section>
-    
-    <!-- Kraj sekcije user-info -->
-    
-    <!-- contact route -->
-    
-<section data-route="contact">
-    
-<paper-material elevation="4" class="boja">
-    <h2 class="page-title">Maps</h2>
-    <p align="justify">Map category is a big category. We should add one general map with points of <b>interests.</b></p>
-    <p align="justify"> Our idea is to create subcategories with different meanings. For example, add category for walking only and then add walking paths via <b>Google My Map.</b> Then add driving paths, parking places, bus stops, and even add additional information about how far is the distance between place A and place B. Google My Map is very powerful, so we should make our best to make amazing and very thorough information.</p>
-</paper-material>
-    
-    <!-- End of contact route -->
-
-    <!-- Unused code, waiting for deletion -->
-    
-    <!--<a data-route="contact" href="{{baseUrl}}contact">
-            <iron-icon icon="mail"></iron-icon>
-            <span>Transportation</span>-->
-<!--</a>-->
-<!--<a data-route="contact" href="{{baseUrl}}contact">
-            <iron-icon icon="mail"></iron-icon>
-            <span>Where to stay</span>
-</a>-->
-<!--<a data-route="contact" href="{{baseUrl}}contact">
-            <iron-icon icon="mail"></iron-icon>
-            <span>Where to eat</span>
-</a>-->
-<!--<a data-route="contact" href="{{baseUrl}}contact">
-            <iron-icon icon="mail"></iron-icon>
-            <span>What to see</span>
-</a>-->
-<!--<a data-route="contact" href="{{baseUrl}}contact">
-            <iron-icon icon="mail"></iron-icon>
-            <span>Where to shop</span>-->
-<!--</a>-->
-<!--<a data-route="contact" href="{{baseUrl}}contact">
-            <iron-icon icon="maps:terrain"></iron-icon>
-            <span>Around Gorazde</span>
-</a>-->
-<!--<a data-route="contact" href="{{baseUrl}}contact">
-            <iron-icon icon="maps:directions"></iron-icon>
-            <span>Getting around</span>
-</a>-->
-<!--<a data-route="contact" href="{{baseUrl}}contact">
-            <iron-icon icon="mail"></iron-icon>
-            <span>Sports and Recreations</span>
-</a>-->
-<!--            <iron-icon icon="maps:pin-drop"></iron-icon>
-            <span>Events</span>
-</a>-->
-<!--<a data-route="contact" href="{{baseUrl}}contact">
-            <iron-icon icon="maps:local-activity"></iron-icon>
-            <span>Health and Wellness</span>
-</a>-->
-    
-        <!--<div dir="rtl">
-      <paper-tabs selected="0" scrollable>
-
-        <paper-tab>NUMBER ONE ITEM</paper-tab>
-        <paper-tab>ITEM TWO</paper-tab>
-        <paper-tab>THE THIRD ITEM</paper-tab>
-        <paper-tab>THE ITEM FOUR</paper-tab>
-        <paper-tab>FIFTH</paper-tab>
-        <paper-tab>THE SIXTH TAB</paper-tab>
-        <paper-tab>NUMBER SEVEN</paper-tab>
-        <paper-tab>EIGHT</paper-tab>
-        <paper-tab>NUMBER NINE</paper-tab>
-        <paper-tab>THE TENTH</paper-tab>
-        <paper-tab>THE ITEM ELEVEN</paper-tab>
-        <paper-tab>TWELFTH ITEM</paper-tab>
-
-      </paper-tabs>
-    </div>-->
-    
-    <!-- <p align="center">Timetable example</p>
+   <!-- <p align="center">Timetable example</p>
     <table class="mui-table" align="center">
   <thead>
     <tr>
@@ -806,10 +850,33 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </tr>
   </tbody>
 </table>-->
+</paper-material>
     
+    
+    <!-- Kraj sekcije rail -->
+    
+    
+</section>
+    
+    
+     <!-- car route -->
+    
+    
+<section data-route="car">
+    
+<paper-material elevation="2">
+     <h1 align="center">Transportation via Car</h1>
+     <p class="paper-font-body1">This area here is intended for an interactive map.</p>
+     <img src="http://www.cityauctiongroup.com/media/car_header.jpg" height="auto" width="auto" align="center"</img>
+</paper-material>  
+   
+<paper-material elevation="4">
+
     <!--<img src="http://www.hennessybus.ie/images/bus-coach-header1.gif" height="auto" width="auto" align="center"</img>-->
-    
-    <!--<h1 style="color: lightgray;" class=paper-font-body4 align="center">Bus timetable and Locations of Bus stops.</h1>-->
+<h1 style="color: gray;" class=paper-font-body4 align="center">Transportation via Cars</h1> 
+<!--<h1 style="color: lightgray;" class=paper-font-body4 align="center">Bus timetable and Locations of Bus stops.</h1>-->
+
+<p align="justify" class=paper-font-body1>Waiting for Ervins text. I am so exausted right now sigh...</p>
     
     <!--<p align="center">Timetable example</p>
     <table class="mui-table" align="center">
@@ -839,8 +906,42 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </tr>
   </tbody>
 </table>-->
+</paper-material>
     
-    <!--<paper-material elevation="3"> 
+<!-- Kraj sekcije cars -->
+    
+</section>
+    
+<!--<section data-route="users">-->
+
+<!--</section>-->
+    
+<!-- user-info route -->
+
+<section data-route="user-info">
+    
+    <paper-material elevation="1">
+        <h2 class="page-title">User: {{params.name}}</h2>
+        <div>This is {{params.name}}'s section</div>
+    </paper-material>
+    
+    <!-- Kraj sekcije user-info -->
+    
+</section>
+
+     <!-- contact route -->
+    
+    <section data-route="contact">
+    <paper-material elevation="1" class="boja">
+        <h2 class="page-title">Maps</h2>
+        <p align="justify">Map category is a big category. We should add one general map with points of <b>interests.</b></p>
+        <p align="justify"> Our idea is to create subcategories with different meanings. For example, add category for walking only and then add walking paths via <b>Google My Map.</b> Then add driving paths, parking places, bus stops, and even add additional information about how far is the distance between place A and place B. Google My Map is very powerful, so we should make our best to make amazing and very thorough information.</p>
+    </paper-material>
+
+   
+    <!-- Unused code, waiting for deletion -->
+    
+<!--<paper-material elevation="3"> 
     
     <h2 align="center" class="page-title">Gorazde Map</h2>
     <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth=""width="100%" height="400" src="https://maps.google.com/maps?hl=en&q=Gorazde&ie=UTF8&t=terrain&z=16&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">
@@ -897,7 +998,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 									embedgooglemaps.com
 							</a></small></div><div><small><a href="http://googlemapsgenerator.com/">Google maps generator</a></small></div></iframe>-->
     
-      <!--<iframe src="https://anelxcolo.cartodb.com/viz/fb14c1cc-bf01-11e5-a2c4-0ecfd53eb7d3/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen width="100%" height="520" ></iframe>-->
+    <!-- End of unused code ready for deletion -->
+  
+    <paper-material elevation="3">
+    <h3 align="center">Walking Path in Gorazde - example</h3>
+    <p>In map example below i have drawn a simple line from place A to place B, while marking it as Walking Path, which it really is. Like this, we should place lines for general directions, points of interests etc.</p>
+    </paper-material>
+
+    <!--<iframe src="https://anelxcolo.cartodb.com/viz/fb14c1cc-bf01-11e5-a2c4-0ecfd53eb7d3/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen width="100%" height="520" ></iframe>-->
     
     <!--<style>.embed-container {position: relative; padding-bottom: 80%; height: 0; max-width: 100%; width:100%;}.embed-container iframe, .embed-container object, .embed-container iframe{position: absolute; top: 0; left: 0; width: 100%; height: 100%;} small{position: absolute; z-index: 40; bottom: 0; margin-bottom: -15px;}</style><div class="embed-container"><iframe width="500" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="Test1" src="http://blahoblaho.maps.arcgis.com/apps/Embed/index.html?webmap=f5d120e8fcb04c95a279388390c22292&amp;extent=-72.0187,-21.5036,-49.299,-11.4041&amp;home=true&amp;zoom=true&amp;scale=true&amp;search=true&amp;searchextent=true&amp;details=true&amp;legend=true&amp;active_panel=details&amp;basemap_gallery=true&amp;disable_scroll=true&amp;theme=light"></iframe></div>-->
     
@@ -905,7 +1013,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     
    <!--<iframe title="Test" src="http://blahoblaho.maps.arcgis.com/apps/Embed/index.html?webmap=c440f3112d284503b4e357b86961a6ef&amp;extent=18.9658,43.6661,18.9868,43.6745&amp;home=true&amp;zoom=true&amp;scale=true&amp;search=true&amp;searchextent=true&amp;details=true&amp;legend=true&amp;active_panel=details&amp;disable_scroll=true&amp;theme=light" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen width="500" height="400" ></iframe>-->
     
-    <!-- FB komentari -->
+    
+     <iframe src="https://mapsengine.google.com/map/embed?mid=zYnnE4Fq5m2A.kLLYAlIy0NFE" width="100%" height="480"></iframe>
+    
+<!-- FB komentari -->
     
     <!--<paper-material elevation="3">
         <p align="center" class=paper-font-body3>Section for review or comments. This is facebook system, which means that you need to have a facebook profile in order to comment. We are trying to implement a different solution, but for now, this works.</p>
@@ -915,30 +1026,23 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <paper-material>
     
 <div class="fb-comments" data-href="https://drinago10.firebaseapp.com/#!/contact" data-width="100%" data-numposts="5"></div></paper-material>-->
+    
    
     <!-- Kraj FB komentara -->
     
-    <!-- End of unused code ready for deletion -->
-  
-    <paper-material elevation="3">
-    <h3 align="center">Walking Path in Gorazde - example</h3>
-    <p>In map example below i have drawn a simple line from place A to place B, while marking it as Walking Path, which it really is. Like this, we should place lines for general directions, points of interests etc.</p>
-    </paper-material>
-
-     <iframe src="https://mapsengine.google.com/map/embed?mid=zYnnE4Fq5m2A.kLLYAlIy0NFE" width="100%" height="480"></iframe>
     
     <!-- Kraj Sekcije Maps -->
 
 </section>
 
-            </iron-pages>
+          </iron-pages>
         </div>
-    </paper-scroll-header-panel>
-</paper-drawer-panel>
+      </paper-scroll-header-panel>
+    </paper-drawer-panel>
 
-<paper-toast id="toast">
+    <paper-toast id="toast">
       <span class="toast-hide-button" role="button" tabindex="0" onclick="app.$.toast.hide()">Ok</span>
-</paper-toast>
+    </paper-toast>
 
 <!-- Ne diraj ovu sekciju -->
 

@@ -80,9 +80,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     opacity: 1;
     color: blue;
   }
-paper-item.paper-item-0
+    
+    /* Fixed bold - 300 default in paper item*/
+    
+    .selectable-content.paper-menu > .iron-selected     {
+    font-weight: 400;
+    }
+    paper-item.paper-item-0
     {
-        font-weight: 300;
+        font-weight: 400;
     }
   .paper-menu > .iron-selected {
     color: black; /*var(--default-primary-color);*/
@@ -97,18 +103,39 @@ paper-item.paper-item-0
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     font-size: 15.5px;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 24px;
     min-height: 48px;
     padding: 0 16px;
   }
 
-    
-    paper-menu.paper-menu-0 {
-       
+    paper-menu a > * 
+    .selectable-content > ::content > * [colored]:focus:after {
+        opacity: 0.26;
     }
     
+    .selectable-content > ::content > * > div,
+    .selectable-content > ::content > * > span {
+        pointer-events: none;
+    }
+    paper-menu.paper-menu-0 {
+    }
     
+    :focus:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: currentColor;
+  opacity: 0.26;
+}
+:focus {
+  position: relative;
+  outline: 0;
+}
+
     hr {
         height: 2px;
         background-color: orange;
